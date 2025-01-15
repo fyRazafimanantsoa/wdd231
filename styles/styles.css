@@ -8,11 +8,11 @@
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
-  background-color: #7ec1f8;
-  color: #333;
+  background-color: #0b0047;
+  color: #ffffff;
 }
 header {
-  background-color: #092d74;
+  background-color: #222e47;
   color: #fff;
   padding: 1rem;
   text-align: center;
@@ -23,11 +23,13 @@ header .profile-header {
   align-items: center;
   justify-content: center;
   gap: 10rem;
+  margin-bottom: 2rem;
 }
 header .profile-img {
-  width: 150px;
+  width: 100px;
   height: auto;
-  border: 2px solid #fff;
+  box-shadow: 0 1rem 1rem 0rem #000000;
+  border-radius: 1rem;
 }
 
 header h1 {
@@ -45,11 +47,10 @@ nav ul {
 nav ul li {
   margin: 0 1rem;
   width: 10rem;
-  height: 2rem;
+  height: 25px;
   text-align: center;
   border: 5rem;
   box-shadow: 0px 3px 3px 0px  #f9f9f9;
-  background-color: #0044cc;
 }
 
 nav ul li:hover{
@@ -59,6 +60,7 @@ nav ul li:hover{
 
 
 nav ul li a {
+  display: block;
   color: #fff;
   text-decoration: none;
   font-weight: bold;
@@ -67,4 +69,73 @@ nav ul li a {
 
 main {
   padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: 
+        "coursework location"
+        "courses courses";
+  gap: 20px;
+}
+
+.coursework{
+  padding: 1rem;
+  grid-area: coursework;
+  background: rgb(55, 1, 71);
+  border-radius: 2rem;
+  border: 3px solid #f9f9f9;
+  
+}
+
+.coursework #course-list{
+  height: 200px;
+  overflow-y: auto;
+}
+
+
+.location{
+  padding: 1rem;
+  grid-area: location;
+  background: rgb(55, 1, 71);
+  border-radius: 2rem;
+  border: 3px solid #f9f9f9;
+}
+
+.certificate-courses{
+  padding: 1rem;
+  grid-area: courses;
+  background: rgb(55, 1, 71);
+  border-radius: 2rem;
+  border: 3px solid #f9f9f9;
+}
+
+.course {
+  display: flex;
+  align-items: center;
+  border: 2px solid #007BFF;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #fff5f5;
+}
+.course input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.course:hover {
+  background-color: #4d031b;
+  border-color: #0056b3;
+}
+.course input[type="checkbox"]:checked + span {
+  font-weight: bold;
+  color: #0056b3;
+}
+footer {
+  background: #002136;
+  text-align: center;
+  width: 100%;
+
 }

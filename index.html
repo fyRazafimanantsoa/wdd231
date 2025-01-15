@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="WDD231 Homepage for coursework and projects">
   <meta name="author" content="Fy Razafimanantsoa">
-  <title>WDD231 Homepage</title>
+  <title>wdd231 Home page</title>
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/getdates.js" defer></script>
 </head>
@@ -13,7 +13,7 @@
   <header>
     <div class="profile-header">
       <img src="images/profile.jpg" alt="Profile picture of Fy Razafimanantsoa" class="profile-img">
-      <h1>Welcome to WDD231</h1>
+      <h1>Fy Razafimanantsoa</h1>
     </div>
     <nav>
       <ul>
@@ -24,12 +24,11 @@
       </ul>
     </nav>
   </header>
-  
   <main>
     <section class="coursework">
       <h2>Coursework</h2>
       <div id="course-list">
-        <div class="course-item">
+        <div class="courses">
           <h3>Introduction to Programming (CSE 110)</h3>
           <p>Credits: 2</p>
           <p>Description: This course will introduce students to programming...</p>
@@ -80,30 +79,37 @@
       <h2>Certificate Courses</h2>
       <p>Check the courses you have completed:</p>
       <div class="course-list">
-        <div class="course-item">
-          <input type="checkbox" id="course110" class="course-checkbox">
-          <label for="course110">Introduction to Programming (CSE 110)</label>
-        </div>
-        <div class="course-item">
-          <input type="checkbox" id="course130" class="course-checkbox">
-          <label for="course130">Web Fundamentals (WDD 130)</label>
-        </div>
-        <div class="course-item">
-          <input type="checkbox" id="course111" class="course-checkbox">
-          <label for="course111">Programming with Functions (CSE 111)</label>
-        </div>
-        <div class="course-item">
-          <input type="checkbox" id="course210" class="course-checkbox">
-          <label for="course210">Programming with Classes (CSE 210)</label>
-        </div>
-        <div class="course-item">
-          <input type="checkbox" id="course131" class="course-checkbox">
-          <label for="course131">Dynamic Web Fundamentals (WDD 131)</label>
-        </div>
-        <div class="course-item">
-          <input type="checkbox" id="course231" class="course-checkbox">
-          <label for="course231">Frontend Web Development I (WDD 231)</label>
-        </div>
+
+        <label class="course">
+          <input type="checkbox" >
+          <span>CSE 110</span>
+        </label>
+
+        <label class="course">
+          <input type="checkbox">
+          <span> WDD 130</span>
+        </label>
+
+        <label class="course">
+          <input type="checkbox" >
+          <span>CSE 111</span>
+        </label>
+
+        <label class="course">
+          <input type="checkbox" >
+          <span>CSE 210</span>
+        </label>
+
+        <label class="course">
+          <input type="checkbox"  >
+          <span>WDD 131</span>
+        </label>
+
+        <label class="course">
+          <input type="checkbox" >
+          <span>WDD 231</span>
+        </label>
+
       </div>
     </section>
   </main>
