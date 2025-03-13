@@ -1,122 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="WDD231 Homepage for coursework and projects">
-  <meta name="author" content="Fy Razafimanantsoa">
-  <title>wdd231 Home page</title>
-  <link rel="stylesheet" href="styles/styles.css">
-  <script src="scripts/getdates.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home page showcasing completed courses and projects">
+    <meta name="author" content="Your Name">
+    <title>Home Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 768px)">
+    <script src="scripts/scripts.js" defer></script>
 </head>
 <body>
-  <header>
-    <div class="profile-header">
-      <img src="images/profile.jpg" alt="Profile picture of Fy Razafimanantsoa" class="profile-img">
-      <h1>Fy Razafimanantsoa</h1>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Chamber</a></li>
-        <li><a href="https://github.com/yourusername" target="_blank">GitHub Profile</a></li>
-        <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
-      </ul>
+    <header>
+        <img src="images/profile.jpg" alt="Profile picture" class="profile">
+        <span class="name">Fy Razafimanantsoa</span>
+        <button class="menu-toggle" aria-label="Open navigation menu">≡</button>
+    </header>
+    
+    <nav class="navigation">
+        <a href="#" class="active">Home</a>
+        <a href="#">Chamber</a>
+        <a href="https://github.com/">GitHub</a>
+        <a href="https://www.linkedin.com/">LinkedIn</a>
     </nav>
-  </header>
-  <main>
-    <section class="coursework">
-      <h2>Coursework</h2>
-      <div id="course-list">
-        <div class="courses">
-          <h3>Introduction to Programming (CSE 110)</h3>
-          <p>Credits: 2</p>
-          <p>Description: This course will introduce students to programming...</p>
-        </div>
-        <div class="courses">
-          <h3>Web Fundamentals (WDD 130)</h3>
-          <p>Credits: 2</p>
-          <p>Description: This course introduces students to the World Wide Web...</p>
-        </div>
-        <div class="courses">
-          <h3>Programming with Functions (CSE 111)</h3>
-          <p>Credits: 2</p>
-          <p>Description: CSE 111 students become more organized, efficient...</p>
-        </div>
-        <div class="courses">
-          <h3>Programming with Classes (CSE 210)</h3>
-          <p>Credits: 2</p>
-          <p>Description: This course will introduce the notion of classes...</p>
-        </div>
-        <div class="courses">
-          <h3>Dynamic Web Fundamentals (WDD 131)</h3>
-          <p>Credits: 2</p>
-          <p>Description: This course builds on prior experience in Web Fundamentals...</p>
-        </div>
-        <div class="courses">
-          <h3>Frontend Web Development I (WDD 231)</h3>
-          <p>Credits: 2</p>
-          <p>Description: This course builds on prior experience with Dynamic Web Fundamentals...</p>
-        </div>
+
+    <main>
+        <h1>Web & Computer Programming Certificate</h1>
+        
+        <div class="main-content">
+          <section class="course-work">
+              <h2>Course Work</h2>
+          </section>
+          <section class="location">
+              <h2>Madagascar</h2>
+              <div class="location-content">
+                  <img src="images/Madagascar-view-of-the-Baobabs.png" alt="Baobabs in Madagascar">
+                  <p>Explore the wonders of Madagascar.</p>
+              </div>
+          </section>
       </div>
-      <div class="button-group">
-        <button id="show-all">All Courses</button>
-        <button id="show-wdd">WDD Courses</button>
-        <button id="show-cse">CSE Courses</button>
-      </div>
-      <p>Total Credits: <span id="total-credits">12</span></p>
-    </section>
-    
-    <section class="location">
-      <h2>Madagascar</h2>
-      <div class="location-content">
-        <img src="images/Madagascar-view-of-the-Baobabs.png" alt="Baobabs in Madagascar">
-        <p>Explore the wonders of Madagascar.</p>
-      </div>
-    </section>
-    
-    <section class="certificate-courses">
-      <h2>Certificate Courses</h2>
-      <p>Check the courses you have completed:</p>
-      <div class="course-list">
 
-        <label class="course">
-          <input type="checkbox" >
-          <span>CSE 110</span>
-        </label>
+        <section class="filters">
+            <button class="filter-btn active" data-filter="all">All Courses</button>
+            <button class="filter-btn" data-filter="WDD">WDD Courses</button>
+            <button class="filter-btn" data-filter="CSE">CSE Courses</button>
+        </section>
 
-        <label class="course">
-          <input type="checkbox">
-          <span> WDD 130</span>
-        </label>
+        <section class="courses">
+            <div class="credits-display">Total Credits: <span id="totalCredits">0</span></div>
+            <div class="course-grid"></div>
+        </section>
+    </main>
 
-        <label class="course">
-          <input type="checkbox" >
-          <span>CSE 111</span>
-        </label>
-
-        <label class="course">
-          <input type="checkbox" >
-          <span>CSE 210</span>
-        </label>
-
-        <label class="course">
-          <input type="checkbox"  >
-          <span>WDD 131</span>
-        </label>
-
-        <label class="course">
-          <input type="checkbox" >
-          <span>WDD 231</span>
-        </label>
-
-      </div>
-    </section>
-  </main>
-  
-  <footer>
-    <p>&copy; <span id="currentyear"></span> | Fy Razafimanantsoa | Madagascar</p>
-    <p id="lastModified"></p>
-  </footer>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Fy Razafimanantsoa - Madagascar</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>

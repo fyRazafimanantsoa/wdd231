@@ -1,0 +1,45 @@
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: var(--primary-color);
+    }
+
+    .navigation a {
+        padding: 1rem 2rem;
+    }
+
+    .course-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+}
+@media (min-width: 768px) {
+    .main-content {
+        flex-direction: row;
+        margin: 0 5%;
+    }
+
+    .course-work {
+        flex: 1;
+        margin-right: 2rem;
+    }
+
+    .location {
+        flex: 0.8;
+        align-self: flex-start;
+        position: sticky;
+        top: 1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .course-work {
+        min-height: 200px;
+    }
+}
