@@ -14,7 +14,7 @@
       "address": "456 Oak Ave, Springfield",
       "phone": "(555) 234-5678",
       "website": "https://www.innovatetech.com",
-      "image": "innovate-tech.png",
+      "image": "Innovatetech.png",
       "membershipLevel": 3,
       "specialties": ["Software development", "IT consulting"],
       "founded": 2015
@@ -24,7 +24,7 @@
       "address": "789 Pine Rd, Springfield",
       "phone": "(555) 345-6789",
       "website": "https://www.springfieldrealty.com",
-      "image": "springfield-realty.svg",
+      "image": "Springfield.png",
       "membershipLevel": 2,
       "agents": 15,
       "communityInvolvement": "Annual housing fair sponsor"
