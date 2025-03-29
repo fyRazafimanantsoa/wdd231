@@ -1,0 +1,72 @@
+[
+    {
+      "name": "Green Valley Bakery",
+      "address": "123 Main St, Springfield",
+      "phone": "(555) 123-4567",
+      "website": "https://www.greenvalleybakery.com",
+      "image": "Green Valley Bakery.png",
+      "membershipLevel": 1,
+      "services": ["Artisan breads", "Custom cakes", "Catering"],
+      "socialMedia": "@greenvalleybakery"
+    },
+    {
+      "name": "InnovateTech Solutions",
+      "address": "456 Oak Ave, Springfield",
+      "phone": "(555) 234-5678",
+      "website": "https://www.innovatetech.com",
+      "image": "innovate-tech.png",
+      "membershipLevel": 3,
+      "specialties": ["Software development", "IT consulting"],
+      "founded": 2015
+    },
+    {
+      "name": "Springfield Realty Group",
+      "address": "789 Pine Rd, Springfield",
+      "phone": "(555) 345-6789",
+      "website": "https://www.springfieldrealty.com",
+      "image": "springfield-realty.svg",
+      "membershipLevel": 2,
+      "agents": 15,
+      "communityInvolvement": "Annual housing fair sponsor"
+    },
+    {
+      "name": "Metro Marketing Co",
+      "address": "101 Maple Ln, Springfield",
+      "phone": "(555) 456-7890",
+      "website": "https://www.metromarketing.net",
+      "image": "metro-marketing.jpg",
+      "membershipLevel": 3,
+      "services": ["Digital marketing", "Brand strategy"],
+      "awards": ["2023 Best Marketing Firm"]
+    },
+    {
+      "name": "Sunrise Café",
+      "address": "202 Cedar Blvd, Springfield",
+      "phone": "(555) 567-8901",
+      "website": "https://www.sunrisecafe.com",
+      "image": "sunrise-cafe.png",
+      "membershipLevel": 1,
+      "features": ["Organic coffee", "Live music nights"],
+      "hours": "6AM-8PM daily"
+    },
+    {
+      "name": "Parker Law Associates",
+      "address": "303 Birch St, Springfield",
+      "phone": "(555) 678-9012",
+      "website": "https://www.parkerlaw.com",
+      "image": "parker-law.svg",
+      "membershipLevel": 2,
+      "practiceAreas": ["Business law", "Intellectual property"],
+      "partners": 4
+    },
+    {
+      "name": "Peak Performance Gym",
+      "address": "404 Spruce Ave, Springfield",
+      "phone": "(555) 789-0123",
+      "website": "https://www.peakperformance.com",
+      "image": "peak-gym.jpg",
+      "membershipLevel": 1,
+      "amenities": ["24/7 access", "Personal training"],
+      "communityPrograms": "Youth fitness initiatives"
+    }
+  ]
