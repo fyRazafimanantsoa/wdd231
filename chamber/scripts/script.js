@@ -12,7 +12,7 @@ async function getWeather() {
         
         // Forecast
         const forecastResponse = await fetch(
-            `https://api.openweathermap.org/data/2.5/forecast?lat=${LAT}&lon=${LON}&units=metric&appid=${WEATHER_API_KEY}`
+            `https://api.openweathermap.org/data/2.5/forecast?lat='-18.9333'&lon='47.5167'&units=metric&appid=ae319551d33a1c811524f76d19861a06`
         );
         const forecastData = await forecastResponse.json();
 
