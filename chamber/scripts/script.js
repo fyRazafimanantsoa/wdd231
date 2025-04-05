@@ -1,34 +1,40 @@
+// Correct API URL format
+const LAT = -18.9178;
+const LON = 47.4724;
+const API_KEY = 'ae319551d33a1c811524f76d19861a06';
 
+// Weather Functions
 async function getWeather() {
     try {
-        // Current Weather
-        const currentResponse = await fetch(
-            `https://api.openweathermap.org/data/2.5/weather?lat='-18.9178'&lon='47.4724'&units=metric&appid=ae319551d33a1c811524f76d19861a06`
-        );
+        const [currentResponse, forecastResponse] = await Promise.all([
+            fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&units=metric&appid=${API_KEY}`),
+            fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${LAT}&lon=${LON}&units=metric&appid=${API_KEY}`)
+        ]);
+
         const currentData = await currentResponse.json();
-        
-        // Forecast
-        const forecastResponse = await fetch(
-            `https://api.openweathermap.org/data/2.5/forecast?lat='-18.9178'&lon='47.4724'&units=metric&appid=ae319551d33a1c811524f76d19861a06`
-        );
         const forecastData = await forecastResponse.json();
 
         updateWeather(currentData);
         updateForecast(forecastData);
     } catch (error) {
-        console.error('Error fetching weather data:', error);
+        console.error('Weather error:', error);
+        document.getElementById('weather-container').innerHTML = 
+            '<p>Weather information currently unavailable</p>';
     }
 }
 
 function capitalize(str) {
-    return str.replace(/\b\w/g, l => l.toUpperCase());
+    return str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 }
 
 function updateWeather(data) {
-    document.getElementById('current-temp').textContent = `${Math.round(data.main.temp)}°C`;
-    document.getElementById('weather-description').textContent = 
-        data.weather.map(w => capitalize(w.description)).join(', ');
-    document.getElementById('humidity').textContent = data.main.humidity;
+    const temp = Math.round(data.main.temp);
+    const desc = data.weather.map(w => capitalize(w.description)).join(', ');
+    const humidity = data.main.humidity;
+
+    document.getElementById('currentTemp').textContent = `${temp}°C`;
+    document.getElementById('weatherDesc').textContent = desc;
+    document.getElementById('humidity').textContent = `Humidity: ${humidity}%`;
     
     const icon = document.getElementById('weather-icon');
     icon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
@@ -36,59 +42,87 @@ function updateWeather(data) {
 }
 
 function updateForecast(data) {
-    const forecastContainer = document.getElementById('forecast');
-    const dailyForecast = data.list.filter(item => item.dt_txt.includes('12:00:00'));
-    
-    forecastContainer.innerHTML = dailyForecast.slice(0, 3).map(day => `
+    const forecastContainer = document.getElementById('threeDayForecast');
+    const dailyForecast = data.list.filter(item => 
+        item.dt_txt.includes('12:00:00')
+    ).slice(0, 3);
+
+    forecastContainer.innerHTML = dailyForecast.map(day => `
         <div class="forecast-day">
             <h4>${new Date(day.dt * 1000).toLocaleDateString('en', { weekday: 'short' })}</h4>
             <img src="https://openweathermap.org/img/wn/${day.weather[0].icon}.png" 
-                 alt="${day.weather[0].description}" loading="lazy">
+                 alt="${day.weather[0].description}"
+                 loading="lazy">
             <p>${Math.round(day.main.temp_max)}°/${Math.round(day.main.temp_min)}°</p>
             <p>${capitalize(day.weather[0].description)}</p>
         </div>
     `).join('');
 }
 
+// Member Spotlight Functions
 async function loadSpotlights() {
-  try {
-      const response = await fetch('data/members.json');
-      const data = await response.json();
-      const qualified = data.members.filter(m => m.membershipLevel >= 2);
-      const spotlights = qualified.sort(() => 0.5 - Math.random()).slice(0, 3);
-      
-      const container = document.getElementById('memberSpotlights');
-      container.innerHTML = spotlights.map(member => `
-          <div class="spotlight-card">
-              <img src="images/${member.image}" alt="${member.name}" loading="lazy">
-              <h3>${member.name}</h3>
-              <p>${member.address}</p>
-              <p>${member.phone}</p>
-              <p class="membership-badge">${member.membershipLevel === 3 ? 'Gold Member' : 'Silver Member'}</p>
-              <a href="${member.website}" target="_blank">Visit Site</a>
-          </div>
-      `).join('');
-  } catch (error) {
-      console.error('Error loading spotlights:', error);
-  }
+    try {
+        const response = await fetch('data/members.json');
+        const data = await response.json();
+        
+        // Filter and randomize members
+        const qualifiedMembers = data.filter(member => 
+            member.membershipLevel >= 2
+        );
+        
+        const shuffledMembers = qualifiedMembers
+            .sort(() => Math.random() - 0.5)
+            .slice(0, 3);
+
+        displaySpotlights(shuffledMembers);
+    } catch (error) {
+        console.error('Spotlight error:', error);
+        document.getElementById('memberSpotlights').innerHTML = 
+            '<p>Featured members information is currently unavailable</p>';
+    }
 }
 
-// Initialize based on page
-if (document.querySelector('.hero-home')) {
-  initHomePage();
+function displaySpotlights(members) {
+    const container = document.getElementById('memberSpotlights');
+    container.innerHTML = members.map(member => `
+        <div class="spotlight-card">
+            <img src="images/${member.image.replace(' ', '-')}" 
+                 alt="${member.name}" 
+                 loading="lazy">
+            <div class="spotlight-content">
+                <h3>${member.name}</h3>
+                <p class="address">${member.address}</p>
+                <p class="phone">📞 ${member.phone}</p>
+                <p class="membership ${member.membershipLevel === 3 ? 'gold' : 'silver'}">
+                    ${member.membershipLevel === 3 ? 'Gold Member' : 'Silver Member'}
+                </p>
+                <a href="${member.website}" target="_blank" rel="noopener">
+                    Visit Website
+                </a>
+            </div>
+        </div>
+    `).join('');
 }
-// Navigation
-const hamburger = document.querySelector('.hamburger');
-const navList = document.querySelector('.nav-list');
 
-hamburger.addEventListener('click', () => {
-    navList.classList.toggle('active');
-    hamburger.setAttribute('aria-expanded', navList.classList.contains('active'));
+// Initialization
+document.addEventListener('DOMContentLoaded', () => {
+  // Navigation
+  const hamburger = document.querySelector('.hamburger');
+  const navList = document.querySelector('.nav-list');
+
+  hamburger.addEventListener('click', () => {
+      navList.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', navList.classList.contains('active'));
+  });
+
+  // Footer Dates
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
+  document.getElementById('lastModified').textContent = document.lastModified;
+
+  // Load content
+  getWeather();
+  loadSpotlights();
 });
-
-// Footer Dates
-document.getElementById('currentYear').textContent = new Date().getFullYear();
-document.getElementById('lastModified').textContent = document.lastModified;
 
 // Member Data
 async function loadBusinesses() {
