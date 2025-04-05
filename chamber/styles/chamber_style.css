@@ -14,7 +14,7 @@
 }
 
 body {
-    font-family: 'Karla', sans-serif;
+    font-family: 'Karla', Arial, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
 }
@@ -80,12 +80,17 @@ body {
     cursor: pointer;
 }
 
+a:focus, button:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
 /* Hero Section */
 .hero {
     position: relative;
     height: 600px;
     overflow: hidden;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
 }
 
 .hero-image {
