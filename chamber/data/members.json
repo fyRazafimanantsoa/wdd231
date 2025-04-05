@@ -20,11 +20,11 @@
       "founded": 2015
     },
     {
-      "name": "Springfield Realty Group",
+      "name": "Springfield Reality Group",
       "address": "789 Pine Rd, Springfield",
       "phone": "(555) 345-6789",
       "website": "https://www.springfieldrealty.com",
-      "image": "springfield.png",
+      "image": "reality.png",
       "membershipLevel": 2,
       "agents": 15,
       "communityInvolvement": "Annual housing fair sponsor"
@@ -44,7 +44,7 @@
       "address": "202 Cedar Blvd, Springfield",
       "phone": "(555) 567-8901",
       "website": "https://www.sunrisecafe.com",
-      "image": "sunrise-cafe.png",
+      "image": "sunrise.png",
       "membershipLevel": 1,
       "features": ["Organic coffee", "Live music nights"],
       "hours": "6AM-8PM daily"
@@ -64,7 +64,7 @@
       "address": "404 Spruce Ave, Springfield",
       "phone": "(555) 789-0123",
       "website": "https://www.peakperformance.com",
-      "image": "peak-gym.jpg",
+      "image": "peakgym.png",
       "membershipLevel": 1,
       "amenities": ["24/7 access", "Personal training"],
       "communityPrograms": "Youth fitness initiatives"
