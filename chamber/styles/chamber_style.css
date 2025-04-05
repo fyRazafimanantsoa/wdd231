@@ -40,6 +40,11 @@ body {
     gap: 0.7rem;
 }
 
+.logo img{
+    height: 60px; 
+    width: 60px;
+}
+
 .logo h1 {
     font-size: 1.5rem;
 }
