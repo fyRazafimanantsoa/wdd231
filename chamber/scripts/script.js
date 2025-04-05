@@ -1,18 +1,15 @@
-const WEATHER_API_KEY = ae319551d33a1c811524f76d19861a06; 
-const LAT = '-18.9333';
-const LON = '47.5167';
 
 async function getWeather() {
     try {
         // Current Weather
         const currentResponse = await fetch(
-            `https://api.openweathermap.org/data/2.5/weather?lat='-18.9333'&lon='47.5167'&units=metric&appid=ae319551d33a1c811524f76d19861a06`
+            `https://api.openweathermap.org/data/2.5/weather?lat='-18.9178'&lon='47.4724'&units=metric&appid=ae319551d33a1c811524f76d19861a06`
         );
         const currentData = await currentResponse.json();
         
         // Forecast
         const forecastResponse = await fetch(
-            `https://api.openweathermap.org/data/2.5/forecast?lat='-18.9333'&lon='47.5167'&units=metric&appid=ae319551d33a1c811524f76d19861a06`
+            `https://api.openweathermap.org/data/2.5/forecast?lat='-18.9178'&lon='47.4724'&units=metric&appid=ae319551d33a1c811524f76d19861a06`
         );
         const forecastData = await forecastResponse.json();
 
