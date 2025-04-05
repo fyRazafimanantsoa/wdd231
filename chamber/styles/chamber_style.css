@@ -195,3 +195,84 @@ body {
     width: 40px;
     height: 40px;
 }
+
+/* Home Page Specific Styles */
+.hero-home {
+    position: relative;
+    height: 60vh;
+    margin-bottom: 2rem;
+}
+
+.hero-cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.cta-button {
+    background: var(--accent-color);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.home-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-areas:
+        "events"
+        "weather"
+        "spotlights";
+}
+
+.events {
+    grid-area: events;
+}
+
+.weather-widget {
+    grid-area: weather;
+}
+
+.spotlights {
+    grid-area: spotlights;
+}
+
+.event-cards {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.event {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.spotlight-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.spotlight-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+

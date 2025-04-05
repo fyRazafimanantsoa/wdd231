@@ -28,4 +28,10 @@
     .business-cards.grid-view {
         grid-template-columns: 1fr;
     }
+    .home-main {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+            "events weather"
+            "spotlights spotlights";
+    }
 }

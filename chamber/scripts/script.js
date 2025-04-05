@@ -1,3 +1,85 @@
+const WEATHER_API_KEY = ae319551d33a1c811524f76d19861a06; 
+const LAT = '-18.9333';
+const LON = '47.5167';
+
+async function getWeather() {
+    try {
+        // Current Weather
+        const currentResponse = await fetch(
+            `https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&units=metric&appid=${WEATHER_API_KEY}`
+        );
+        const currentData = await currentResponse.json();
+        
+        // Forecast
+        const forecastResponse = await fetch(
+            `https://api.openweathermap.org/data/2.5/forecast?lat=${LAT}&lon=${LON}&units=metric&appid=${WEATHER_API_KEY}`
+        );
+        const forecastData = await forecastResponse.json();
+
+        updateWeather(currentData);
+        updateForecast(forecastData);
+    } catch (error) {
+        console.error('Error fetching weather data:', error);
+    }
+}
+
+function capitalize(str) {
+    return str.replace(/\b\w/g, l => l.toUpperCase());
+}
+
+function updateWeather(data) {
+    document.getElementById('current-temp').textContent = `${Math.round(data.main.temp)}°C`;
+    document.getElementById('weather-description').textContent = 
+        data.weather.map(w => capitalize(w.description)).join(', ');
+    document.getElementById('humidity').textContent = data.main.humidity;
+    
+    const icon = document.getElementById('weather-icon');
+    icon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+    icon.alt = data.weather[0].description;
+}
+
+function updateForecast(data) {
+    const forecastContainer = document.getElementById('forecast');
+    const dailyForecast = data.list.filter(item => item.dt_txt.includes('12:00:00'));
+    
+    forecastContainer.innerHTML = dailyForecast.slice(0, 3).map(day => `
+        <div class="forecast-day">
+            <h4>${new Date(day.dt * 1000).toLocaleDateString('en', { weekday: 'short' })}</h4>
+            <img src="https://openweathermap.org/img/wn/${day.weather[0].icon}.png" 
+                 alt="${day.weather[0].description}" loading="lazy">
+            <p>${Math.round(day.main.temp_max)}°/${Math.round(day.main.temp_min)}°</p>
+            <p>${capitalize(day.weather[0].description)}</p>
+        </div>
+    `).join('');
+}
+
+async function loadSpotlights() {
+  try {
+      const response = await fetch('data/members.json');
+      const data = await response.json();
+      const qualified = data.members.filter(m => m.membershipLevel >= 2);
+      const spotlights = qualified.sort(() => 0.5 - Math.random()).slice(0, 3);
+      
+      const container = document.getElementById('memberSpotlights');
+      container.innerHTML = spotlights.map(member => `
+          <div class="spotlight-card">
+              <img src="images/${member.image}" alt="${member.name}" loading="lazy">
+              <h3>${member.name}</h3>
+              <p>${member.address}</p>
+              <p>${member.phone}</p>
+              <p class="membership-badge">${member.membershipLevel === 3 ? 'Gold Member' : 'Silver Member'}</p>
+              <a href="${member.website}" target="_blank">Visit Site</a>
+          </div>
+      `).join('');
+  } catch (error) {
+      console.error('Error loading spotlights:', error);
+  }
+}
+
+// Initialize based on page
+if (document.querySelector('.hero-home')) {
+  initHomePage();
+}
 // Navigation
 const hamburger = document.querySelector('.hamburger');
 const navList = document.querySelector('.nav-list');
