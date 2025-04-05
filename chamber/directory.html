@@ -4,84 +4,53 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Itaosy Chamber of Commerce directory page featuring local businesses and community information">
+        <meta name="author" content="Fy Razafimanantsoa">
         <meta property="og:title" content="Itaosy Chamber of Commerce">
         <meta property="og:type" content="website">
         <meta property="og:image" content="https://fyrazafimanantsoa.github.io/wdd231/chamber/images/Master_piece.png">
         <meta property="og:url" content="https://fyrazafimanantsoa.github.io/wdd231/chamber/directory.html">
         <title>Itaosy Chamber of Commerce</title>
         <link rel="stylesheet" href="styles/chamber_style.css">
-        <link rel="stylesheet" href="styles/small_tyle.css">
+        <link rel="stylesheet" href="styles/small_style.css">
         <link rel="icon" href="favicon.ico">
-        <script src="script/script.js" defer></script>
+        <script src="scripts/" defer></script>
     </head>
     <body>
         <header class="site-header">
             <div class="header-content">
                 <div class="logo">
-                    <img src="images/Master_piece.png" alt="Itaosy chamber of Commerce logo" style="height: 60px; width: 60px;">
+                    <img src="images/master_piece.png" alt="Itaosy chamber of Commerce logo" style="height: 60px; width: 60px;">
                     <h1>Itaosy Chamber of Commerce</h1>
                 </div>
-                
                 <nav class="main-nav">
                     <button class="hamburger" aria-label="Menu">☰</button>
                     <ul class="nav-list">
-                        <li><a href="#" class="active">Home</a></li>
-                        <li><a href="directory.html">Directory</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="directory.html" class="active">Directory</a></li>
                         <li><a href="#">Join</a></li>
                         <li><a href="#">About</a></li>
                     </ul>
-                    <button class="cta-button">Keynote Tickets</button>
                 </nav>
             </div>
         </header>
         <section class="hero">
-            <div class="hero-slider">
-                
-                <div class="slide active">
-                    <img src="images/hero_1.png" alt="Business community gathering" loading="lazy">
-                    <div class="slide-content">
-                        <h2>Connecting Local Businesses</h2>
-                        <p>Join our growing network of entrepreneurs</p>
-                    </div>
-                </div>
-                
-                
-                <div class="slide">
-                    <img src="images/hero_2.png" alt="City landscape" loading="lazy">
-                    <div class="slide-content">
-                        <h2>Promoting Economic Growth</h2>
-                        <p>Building a stronger local economy together</p>
-                    </div>
-                </div>
-                
-                
-                <div class="slide">
-                    <img src="images/hero_3.png" alt="Office meeting" loading="lazy">
-                    <div class="slide-content">
-                        <h2>Professional Development</h2>
-                        <p>Regular workshops and networking events</p>
-                    </div>
-                </div>
+            <picture>
+                <source media="(min-width: 1024px)" srcset="images/hero_1.png">
+                <source media="(min-width: 768px)" srcset="images/hero_2.png">
+                <img src="images/hero_3.png" alt="Itaosy city view" class="hero-image" loading="lazy">
+            </picture>
+            <div class="hero-content">
+                <h2>Connecting Businesses, Building Community</h2>
             </div>
-            
-            
-            <button class="slider-prev" aria-label="Previous slide">❮</button>
-            <button class="slider-next" aria-label="Next slide">❯</button>
-            
-            
-            <div class="slider-dots"></div>
         </section>
+        
         <main class="content-container">
             <section class="info-columns">
-                <!-- Events Column -->
                 <div class="column events">
                     <h2>Upcoming Events</h2>
                     <div class="event-list">
-                        <!-- Dynamic content will be added here -->
                     </div>
                 </div>
-    
-                <!-- Current Weather -->
                 <div class="column current-weather">
                     <h2>Current Weather</h2>
                     <div class="weather-widget">
@@ -96,8 +65,6 @@
                         </div>
                     </div>
                 </div>
-    
-                <!-- Weather Forecast -->
                 <div class="column forecast">
                     <h2>3-Day Forecast</h2>
                     <div class="forecast-list">
@@ -116,13 +83,14 @@
                     </div>
                 </div>
             </section>
-    
-            <!-- Business Listings -->
+            <div class="view-toggle">
+                <button id="gridView" class="active">Grid</button>
+                <button id="listView">List</button>
+            </div>
+            
             <section class="business-listings">
                 <h2>Featured Businesses</h2>
-                <div class="business-cards">
-                    
-                </div>
+                <div class="business-cards"></div>
             </section>
         </main>
 
@@ -134,7 +102,6 @@
                 Email: contact@itaosychamber.org<br>
                 Phone: +261 34 56 789 10</p>
             </div>
-
             <div class="social-media">
                 <a href="#" aria-label="Facebook"><img src="images/facebook.svg" alt="Facebook" style="height: 60px; width: 60px;"></a>
                 <a href="#" aria-label="Twitter"><img src="images/instagram.svg" alt="Twitter" style="height: 60px; width: 60px;"></a>

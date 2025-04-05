@@ -4,7 +4,7 @@
       "address": "123 Main St, Springfield",
       "phone": "(555) 123-4567",
       "website": "https://www.greenvalleybakery.com",
-      "image": "Green Valley Bakery.png",
+      "image": "green valley bakery.png",
       "membershipLevel": 1,
       "services": ["Artisan breads", "Custom cakes", "Catering"],
       "socialMedia": "@greenvalleybakery"
@@ -14,7 +14,7 @@
       "address": "456 Oak Ave, Springfield",
       "phone": "(555) 234-5678",
       "website": "https://www.innovatetech.com",
-      "image": "Innovatetech.png",
+      "image": "innovatetech.png",
       "membershipLevel": 3,
       "specialties": ["Software development", "IT consulting"],
       "founded": 2015
@@ -24,7 +24,7 @@
       "address": "789 Pine Rd, Springfield",
       "phone": "(555) 345-6789",
       "website": "https://www.springfieldrealty.com",
-      "image": "Springfield.png",
+      "image": "springfield.png",
       "membershipLevel": 2,
       "agents": 15,
       "communityInvolvement": "Annual housing fair sponsor"

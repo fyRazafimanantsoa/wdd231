@@ -1,18 +1,4 @@
-
-const hamburger = document.querySelector('.hamburger');
-const navList = document.querySelector('.nav-list');
-
-hamburger.addEventListener('click', () => {
-    navList.classList.toggle('active');
-});
-
-
-
-document.getElementById('currentYear').textContent = new Date().getFullYear();
-document.getElementById('lastModified').textContent = document.lastModified;
-
-
-let currentSlide = 0;
+// let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
 const dotsContainer = document.querySelector('.slider-dots');
 
@@ -76,21 +62,88 @@ async function loadBusinesses() {
     }
 }
 
-function displayBusinesses(businesses) {
-    const container = document.querySelector('.business-cards');
-    if (!container) return;
-    
-    container.innerHTML = businesses.length ? businesses.map(business => `
-    <div class="business-card">
-        <img src="images/${business.image}" alt="${business.name}"  style="height: 100px; width: 100px;">
-        <h3>${business.name}</h3>
-        <p>${business.address}</p>
-        <p>📞 ${business.phone}</p>
-        <p>${business.membershipLevel} Member</p>
-        <a href="${business.website}" target="_blank">Visit Website</a>
-  </div>
-  `).join('') : '<p>No businesses found</p>';
+
+/// CSS style 
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
-loadBusinesses();
+.slide.active {
+    opacity: 1;
+}
 
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.slide-content {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1.5rem;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+.slider-prev,
+.slider-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.slider-prev:hover,
+.slider-next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.slider-prev {
+    left: 1rem;
+}
+
+.slider-next {
+    right: 1rem;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.slider-dots .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+}
+
+.slider-dots .dot.active {
+    background: var(--accent-color);
+}
+
+
+<button class="slider-prev" aria-label="Previous slide">❮</button>
+<button class="slider-next" aria-label="Next slide">❯</button>        
+<div class="slider-dots"></div>
