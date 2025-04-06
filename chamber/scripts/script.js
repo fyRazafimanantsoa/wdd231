@@ -182,3 +182,41 @@ async function initialize() {
       console.error('Initialization error:', error);
     }
   }
+/// Join page
+// Set form timestamp
+document.getElementById('timestamp').value = new Date().toISOString();
+
+// Modal functionality
+document.addEventListener('DOMContentLoaded', () => {
+    // Open modals
+    document.querySelectorAll('.info-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const modalId = btn.dataset.modal;
+            const modal = document.getElementById(modalId);
+            modal.showModal();
+        });
+    });
+
+    // Close modals
+    document.querySelectorAll('.close-modal').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const modal = btn.closest('dialog');
+            modal.close();
+        });
+    });
+
+    // Close modal on backdrop click
+    document.querySelectorAll('.modal').forEach(modal => {
+        modal.addEventListener('click', (e) => {
+            const dialogDimensions = modal.getBoundingClientRect();
+            if (
+                e.clientX < dialogDimensions.left ||
+                e.clientX > dialogDimensions.right ||
+                e.clientY < dialogDimensions.top ||
+                e.clientY > dialogDimensions.bottom
+            ) {
+                modal.close();
+            }
+        });
+    });
+});

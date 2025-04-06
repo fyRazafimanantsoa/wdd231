@@ -570,3 +570,145 @@ body {
     to { left: 150%; }
 }
 
+/* JOIN PAGE SPECIFIC STYLES */
+.join-main {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.join-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
+
+.membership-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.form-section {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.form-section label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-section input,
+.form-section textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.form-section input:focus,
+.form-section textarea:focus {
+    border-color: #2c3e50;
+    outline: none;
+}
+
+.radio-group {
+    display: grid;
+    gap: 1rem;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.radio-custom {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #2c3e50;
+    border-radius: 50%;
+    position: relative;
+}
+
+input[type="radio"]:checked + .radio-custom::after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #3498db;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.membership-cards {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.membership-card {
+    padding: 2rem;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.membership-card.np { background: #1a7a4a; }
+.membership-card.bronze { background: #b86518; }
+.membership-card.silver { background: #6b7d7d; }
+.membership-card.gold { background: #c49d07; }
+
+.info-btn {
+    background: rgba(255,255,255,0.2);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 2rem;
+    color: white;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.modal {
+    border: none;
+    border-radius: 8px;
+    padding: 0;
+    width: min(90%, 600px);
+}
+
+.modal::backdrop {
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(3px);
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+
+@keyframes fadeInUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
