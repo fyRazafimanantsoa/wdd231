@@ -220,3 +220,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const membershipLevels = {
+        np: 'Non-Profit Membership',
+        bronze: 'Bronze Membership',
+        silver: 'Silver Membership',
+        gold: 'Gold Membership'
+    };
+    
+    document.getElementById('membership').textContent = 
+        membershipLevels[params.get('membership')] || 'Not Specified';
+});
+</script>

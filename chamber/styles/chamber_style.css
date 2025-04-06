@@ -710,5 +710,50 @@ input[type="radio"]:checked + .radio-custom::after {
     to { opacity: 1; transform: translateY(0); }
 }
 
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #2c3e50;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Combined selectors */
+.view-toggle button,
+.cta-button,
+.hamburger {
+    transition: all 0.3s ease;
+}
+
+.weather-container,
+.weather-widget,
+.forecast {
+    background: var(--background-color);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+
+@keyframes cardEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.membership-card {
+    animation: cardEntrance 0.6s ease forwards;
+}
 
 
