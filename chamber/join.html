@@ -46,29 +46,30 @@
                         <legend>Personal Information</legend>
                         <label>
                             First Name*
-                            <input type="text" name="firstName" required autocomplete="given-name"
-                                title="Please enter your first name">
+                            <input type="text" name="firstName" required 
+                                   autocomplete="given-name" title="Enter your first name">
                         </label>
 
                         <label>
                             Last Name*
-                            <input type="text" name="lastName" required autocomplete="family-name"
-                                title="Please enter your last name">
+                            <input type="text" name="lastName" required 
+                                   autocomplete="family-name" title="Enter your last name">
                         </label>
 
                         <label>
                             Mobile Phone*
                             <input type="tel" name="phone" required 
                                    pattern="\+?[0-9\s\-]+" 
-                                   title="Please enter a valid phone number"
+                                   title="Valid phone number format: +261 34 12 345 67"
                                    autocomplete="tel">
                         </label>
 
                         <label>
                             Title/Position
-                            <input type="text" name="title" pattern="[A-Za-z\- ]{7,}" 
-                                autocomplete="organization-title"
-                                title="Minimum 7 characters, letters, hyphens, and spaces only">
+                            <input type="text" name="title" 
+                                   pattern="[A-Za-zÀ-ÿ\- ]{7,}" 
+                                   autocomplete="organization-title"
+                                   title="7+ characters (letters, hyphens, spaces)">
                         </label>
                     </fieldset>
 
@@ -76,14 +77,9 @@
                         <legend>Contact Information</legend>
                         <label>
                             Email*
-                            <input type="email" name="email" required autocomplete="email"
-                                placeholder="name@business.com" title="Please enter a valid email address">
-                        </label>
-
-                        <label>
-                            Mobile Phone*
-                            <input type="tel" name="phone" required autocomplete="tel"
-                                title="Please enter your phone number">
+                            <input type="email" name="email" required 
+                                   autocomplete="email" placeholder="name@business.com"
+                                   title="Enter a valid email address">
                         </label>
                     </fieldset>
 
@@ -91,55 +87,64 @@
                         <legend>Organization Information</legend>
                         <label>
                             Business/Organization Name*
-                            <input type="text" name="organization" required autocomplete="organization"
-                                title="Please enter your organization name">
+                            <input type="text" name="organization" required 
+                                   autocomplete="organization"
+                                   title="Enter your organization name">
                         </label>
 
                         <label>
                             Business Description
                             <textarea name="description"
-                                title="Brief description of your business/organization"></textarea>
+                                title="Brief description of your organization"></textarea>
                         </label>
                     </fieldset>
 
                     <fieldset class="form-section membership-levels">
                         <legend>Select Membership Level*</legend>
                         <div class="radio-group">
-                            <label class="radio-option">
-                                <input type="radio" name="membership" value="np" required>
-                                <span class="radio-custom"></span>
-                                <div class="radio-content">
-                                    <h4>NP Membership</h4>
-                                    <p>(Non-Profit Organizations)</p>
-                                </div>
-                            </label>
-
-                            <label class="radio-option">
-                                <input type="radio" name="membership" value="bronze" required>
-                                <span class="radio-custom"></span>
-                                <div class="radio-content">
-                                    <h4>Bronze Membership</h4>
-                                    <p>Basic Support Package</p>
-                                </div>
-                            </label>
-
-                            <label class="radio-option">
-                                <input type="radio" name="membership" value="silver" required>
-                                <span class="radio-custom"></span>
-                                <div class="radio-content">
-                                    <h4>Silver Membership</h4>
-                                    <p>Enhanced Benefits</p>
-                                </div>
-                            </label>
-
-                            <label class="radio-option">
-                                <input type="radio" name="membership" value="gold" required>
-                                <span class="radio-custom"></span>
-                                <div class="radio-content">
-                                    <h4>Gold Membership</h4>
-                                    <p>Premium Package</p>
-                                </div>
-                            </label>
+                            <div class="radio-option">
+                                <input type="radio" name="membership" id="np" value="np" required>
+                                <label for="np">
+                                    <span class="radio-custom"></span>
+                                    <span class="radio-content">
+                                        <strong class="radio-title">NP Membership</strong>
+                                        <span class="radio-description">(Non-Profit Organizations - No Fee)</span>
+                                    </span>
+                                </label>
+                            </div>
+                    
+                            <div class="radio-option">
+                                <input type="radio" name="membership" id="bronze" value="bronze">
+                                <label for="bronze">
+                                    <span class="radio-custom"></span>
+                                    <span class="radio-content">
+                                        <strong class="radio-title">Bronze Membership</strong>
+                                        <span class="radio-description">($200/year - Basic Support Package)</span>
+                                    </span>
+                                </label>
+                            </div>
+                    
+                            <div class="radio-option">
+                                <input type="radio" name="membership" id="silver" value="silver">
+                                <label for="silver">
+                                    <span class="radio-custom"></span>
+                                    <span class="radio-content">
+                                        <strong class="radio-title">Silver Membership</strong>
+                                        <span class="radio-description">($400/year - Enhanced Benefits)</span>
+                                    </span>
+                                </label>
+                            </div>
+                    
+                            <div class="radio-option">
+                                <input type="radio" name="membership" id="gold" value="gold">
+                                <label for="gold">
+                                    <span class="radio-custom"></span>
+                                    <span class="radio-content">
+                                        <strong class="radio-title">Gold Membership</strong>
+                                        <span class="radio-description">($600/year - Premium Package)</span>
+                                    </span>
+                                </label>
+                            </div>
                         </div>
                     </fieldset>
 
@@ -158,6 +163,18 @@
                             <li>Basic Listing</li>
                         </ul>
                         <button class="info-btn" data-modal="np-modal">View Benefits</button>
+                        <dialog id="np-modal" class="modal">
+                            <div class="modal-content">
+                                <h3>NP Membership Benefits</h3>
+                                <ul>
+                                    <li>Non-profit organization listing</li>
+                                    <li>Access to community resources</li>
+                                    <li>Monthly newsletter</li>
+                                    <li>Volunteer opportunities</li>
+                                </ul>
+                                <button class="close-modal">X</button>
+                            </div>
+                        </dialog>
                     </div>
                 </article>
 
@@ -170,6 +187,18 @@
                             <li>Monthly Newsletter</li>
                         </ul>
                         <button class="info-btn" data-modal="bronze-modal">View Benefits</button>
+                        <dialog id="bronze-modal" class="modal">
+                            <div class="modal-content">
+                                <h3>Bronze Membership Benefits</h3>
+                                <ul>
+                                    <li>Business directory listing</li>
+                                    <li>Monthly networking events</li>
+                                    <li>10% event discounts</li>
+                                    <li>Basic business support</li>
+                                </ul>
+                                <button class="close-modal">X</button>
+                            </div>
+                        </dialog>
                     </div>
                 </article>
 
@@ -183,6 +212,19 @@
                             <li>Training Sessions</li>
                         </ul>
                         <button class="info-btn" data-modal="silver-modal">View Benefits</button>
+                        <dialog id="silver-modal" class="modal">
+                            <div class="modal-content">
+                                <h3>Silver Membership Benefits</h3>
+                                <ul>
+                                    <li>All Bronze benefits</li>
+                                    <li>Enhanced directory listing</li>
+                                    <li>25% event discounts</li>
+                                    <li>Priority customer referrals</li>
+                                    <li>Monthly training sessions</li>
+                                </ul>
+                                <button class="close-modal">X</button>
+                            </div>
+                        </dialog>
                     </div>
                 </article>
 
@@ -197,66 +239,24 @@
                             <li>Premium Support</li>
                         </ul>
                         <button class="info-btn" data-modal="gold-modal">View Benefits</button>
+                        <dialog id="gold-modal" class="modal">
+                            <div class="modal-content">
+                                <h3>Gold Membership Benefits</h3>
+                                <ul>
+                                    <li>All Silver benefits</li>
+                                    <li>Premium directory placement</li>
+                                    <li>50% event discounts</li>
+                                    <li>VIP event access</li>
+                                    <li>Home page spotlight</li>
+                                    <li>Dedicated business coach</li>
+                                </ul>
+                                <button class="close-modal">X</button>
+                            </div>
+                        </dialog>
                     </div>
                 </article>
             </div>
         </div>
-
-        <!-- Modals -->
-        <dialog id="np-modal" class="modal">
-            <div class="modal-content">
-                <h3>NP Membership Benefits</h3>
-                <ul>
-                    <li>Non-profit organization listing</li>
-                    <li>Access to community resources</li>
-                    <li>Monthly newsletter</li>
-                    <li>Volunteer opportunities</li>
-                </ul>
-                <button class="close-modal">&times;</button>
-            </div>
-        </dialog>
-
-        <dialog id="bronze-modal" class="modal">
-            <div class="modal-content">
-                <h3>Bronze Membership Benefits</h3>
-                <ul>
-                    <li>Business directory listing</li>
-                    <li>Monthly networking events</li>
-                    <li>10% event discounts</li>
-                    <li>Basic business support</li>
-                </ul>
-                <button class="close-modal">&times;</button>
-            </div>
-        </dialog>
-
-        <dialog id="silver-modal" class="modal">
-            <div class="modal-content">
-                <h3>Silver Membership Benefits</h3>
-                <ul>
-                    <li>All Bronze benefits</li>
-                    <li>Enhanced directory listing</li>
-                    <li>25% event discounts</li>
-                    <li>Priority customer referrals</li>
-                    <li>Monthly training sessions</li>
-                </ul>
-                <button class="close-modal">&times;</button>
-            </div>
-        </dialog>
-
-        <dialog id="gold-modal" class="modal">
-            <div class="modal-content">
-                <h3>Gold Membership Benefits</h3>
-                <ul>
-                    <li>All Silver benefits</li>
-                    <li>Premium directory placement</li>
-                    <li>50% event discounts</li>
-                    <li>VIP event access</li>
-                    <li>Home page spotlight</li>
-                    <li>Dedicated business coach</li>
-                </ul>
-                <button class="close-modal">&times;</button>
-            </div>
-        </dialog>
     </main>
 
     <footer class="site-footer">

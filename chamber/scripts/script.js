@@ -183,30 +183,37 @@ async function initialize() {
     }
   }
 /// Join page
-// Set form timestamp
-document.getElementById('timestamp').value = new Date().toISOString();
 
-// Modal functionality
+// Join Page Functionality
 document.addEventListener('DOMContentLoaded', () => {
-    // Open modals
-    document.querySelectorAll('.info-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const modalId = btn.dataset.modal;
+    // Set timestamp
+    const timestampField = document.getElementById('timestamp');
+    if(timestampField) {
+        timestampField.value = new Date().toISOString();
+    }
+
+    // Modal handling
+    const modals = document.querySelectorAll('.modal');
+    const openButtons = document.querySelectorAll('[data-modal]');
+    const closeButtons = document.querySelectorAll('.close-modal');
+
+    openButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modalId = button.dataset.modal;
             const modal = document.getElementById(modalId);
-            modal.showModal();
+            if(modal) modal.showModal();
         });
     });
 
-    // Close modals
-    document.querySelectorAll('.close-modal').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const modal = btn.closest('dialog');
-            modal.close();
+    closeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modal = button.closest('dialog');
+            if(modal) modal.close();
         });
     });
 
-    // Close modal on backdrop click
-    document.querySelectorAll('.modal').forEach(modal => {
+    // Close modal on outside click
+    modals.forEach(modal => {
         modal.addEventListener('click', (e) => {
             const dialogDimensions = modal.getBoundingClientRect();
             if (
@@ -219,18 +226,33 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Form validation
+    const form = document.getElementById('joinForm');
+    if(form) {
+        form.addEventListener('submit', (e) => {
+            const titleInput = form.querySelector('[name="title"]');
+            if(titleInput.value && !/^[A-Za-zÀ-ÿ\- ]{7,}$/.test(titleInput.value)) {
+                e.preventDefault();
+                titleInput.setCustomValidity('Please enter at least 7 characters (letters, hyphens, spaces only)');
+                titleInput.reportValidity();
+            }
+        });
+
+        // Clear custom validity on input
+        form.querySelector('[name="title"]').addEventListener('input', function() {
+            this.setCustomValidity('');
+        });
+    }
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const params = new URLSearchParams(window.location.search);
-    const membershipLevels = {
-        np: 'Non-Profit Membership',
-        bronze: 'Bronze Membership',
-        silver: 'Silver Membership',
-        gold: 'Gold Membership'
-    };
-    
-    document.getElementById('membership').textContent = 
-        membershipLevels[params.get('membership')] || 'Not Specified';
-});
-</script>
+// Thankyou page //
+const params = new URLSearchParams(window.location.search);
+        
+        document.getElementById('submission-name').textContent = 
+            `${params.get('firstName')} ${params.get('lastName')}`;
+        document.getElementById('submission-email').textContent = params.get('email');
+        document.getElementById('submission-phone').textContent = params.get('phone');
+        document.getElementById('submission-org').textContent = params.get('organization');
+        document.getElementById('submission-date').textContent = 
+            new Date(params.get('timestamp')).toLocaleString();

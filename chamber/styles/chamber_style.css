@@ -571,51 +571,74 @@ body {
 }
 
 /* JOIN PAGE SPECIFIC STYLES */
+/* JOIN PAGE STYLES */
 .join-main {
-    padding: 2rem 1rem;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.page-title {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
 }
 
 .join-container {
     display: grid;
-    gap: 2rem;
+    gap: 3rem;
     grid-template-columns: 1fr;
 }
 
 .membership-form {
     background: white;
     padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    width: 100%;
+}
+
+.form-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .form-section {
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    border: 1px solid #eee;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    width: 100%;
 }
 
-.form-section label {
-    display: block;
-    margin-bottom: 0.5rem;
+.form-section legend {
     font-weight: 600;
+    color: var(--primary-color);
+    padding: 0 0.5rem;
+    width: 100%;
 }
 
-.form-section input,
-.form-section textarea {
+.membership-form label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.membership-form input,
+.membership-form textarea {
     width: 100%;
     padding: 0.8rem;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    transition: border-color 0.3s ease;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    transition: var(--transition);
 }
 
-.form-section input:focus,
-.form-section textarea:focus {
-    border-color: #2c3e50;
+.membership-form input:focus,
+.membership-form textarea:focus {
+    border-color: var(--secondary-color);
     outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
 }
 
 .radio-group {
@@ -624,136 +647,123 @@ body {
 }
 
 .radio-option {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+    background: var(--background-color);
     padding: 1rem;
-    background: #f8f9fa;
-    border-radius: 8px;
+    border-radius: 0.5rem;
+    border: 1px solid #eee;
+
+}
+
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin: 0;
+    pointer-events: none;
+  }
+
+  .radio-option label {
+    display: inline-flex;
+    align-items: center;
     cursor: pointer;
-}
+  }
 
-.radio-custom {
-    width: 20px;
-    height: 20px;
-    border: 2px solid #2c3e50;
+  .radio-custom {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 2px solid var(--primary-color);
     border-radius: 50%;
+    margin-right: 0.8rem;
     position: relative;
-}
+  }
 
-input[type="radio"]:checked + .radio-custom::after {
+  input[type="radio"]:checked + label .radio-custom::after {
     content: '';
-    width: 12px;
-    height: 12px;
-    background: #3498db;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 0.6rem;
+    height: 0.6rem;
+    background: var(--secondary-color);
     border-radius: 50%;
-}
+  }
 
 .membership-cards {
     display: grid;
     gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .membership-card {
-    padding: 2rem;
-    border-radius: 8px;
-    color: white;
-    text-align: center;
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
     opacity: 0;
-    animation: fadeInUp 0.5s ease forwards;
+    transform: translateY(20px);
+    animation: cardEntrance 0.6s ease forwards;
 }
-
-.membership-card.np { background: #1a7a4a; }
-.membership-card.bronze { background: #b86518; }
-.membership-card.silver { background: #6b7d7d; }
-.membership-card.gold { background: #c49d07; }
-
-.info-btn {
-    background: rgba(255,255,255,0.2);
-    border: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 2rem;
-    color: white;
-    margin-top: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.modal {
-    border: none;
-    border-radius: 8px;
-    padding: 0;
-    width: min(90%, 600px);
-}
-
-.modal::backdrop {
-    background: rgba(0,0,0,0.5);
-    backdrop-filter: blur(3px);
-}
-
-.close-modal {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #333;
-}
-
-@keyframes fadeInUp {
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: #2c3e50;
-    color: white;
-    padding: 8px;
-    z-index: 100;
-    transition: top 0.3s;
-}
-
-.skip-link:focus {
-    top: 0;
-}
-
-/* Combined selectors */
-.view-toggle button,
-.cta-button,
-.hamburger {
-    transition: all 0.3s ease;
-}
-
-.weather-container,
-.weather-widget,
-.forecast {
-    background: var(--background-color);
-    padding: 1rem;
-    border-radius: 8px;
-}
-
 
 @keyframes cardEntrance {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-.membership-card {
-    animation: cardEntrance 0.6s ease forwards;
+.membership-card:nth-child(1) { animation-delay: 0.2s; }
+.membership-card:nth-child(2) { animation-delay: 0.4s; }
+.membership-card:nth-child(3) { animation-delay: 0.6s; }
+.membership-card:nth-child(4) { animation-delay: 0.8s; }
+
+.info-btn {
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+    margin-top: 1rem;
 }
 
+.info-btn:hover {
+    background: var(--primary-color);
+}
 
+.modal {
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+}
+
+.modal::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
