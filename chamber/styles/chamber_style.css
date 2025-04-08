@@ -595,7 +595,7 @@ body {
     padding: 2rem;
     border-radius: var(--border-radius);
     box-shadow: var(--card-shadow);
-    width: 100%;
+    width: auto;
 }
 
 .form-grid {
@@ -608,14 +608,14 @@ body {
     border: 1px solid #eee;
     padding: 1.5rem;
     border-radius: var(--border-radius);
-    width: 100%;
+    width: auto;
 }
 
 .form-section legend {
     font-weight: 600;
     color: var(--primary-color);
     padding: 0 0.5rem;
-    width: 100%;
+    width: auto;
 }
 
 .membership-form label {
@@ -644,6 +644,7 @@ body {
 .radio-group {
     display: grid;
     gap: 1rem;
+    width: auto;
 }
 
 .radio-option {
@@ -766,4 +767,32 @@ input[type="radio"] {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.modal {
+    z-index: 10000; /* Ensure it appears above header */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal[open] {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.thankyou-container{
+    margin: 1rem;
+    border: 1px dotted var(--primary-color);
+    box-shadow: 0.5rem 2rem var(--primary-color);
+    border-radius: 5%;
+    padding: 2rem;
+    width: 80%;
 }

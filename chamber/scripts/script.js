@@ -247,12 +247,33 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Thankyou page //
-const params = new URLSearchParams(window.location.search);
+// Thankyou page functionality
+document.addEventListener('DOMContentLoaded', () => {
+    // Only run on thankyou page
+    if (document.querySelector('.thankyou-main')) {
+        const params = new URLSearchParams(window.location.search);
         
-        document.getElementById('submission-name').textContent = 
+        // Safely get elements
+        const getElement = (id) => document.getElementById(id) || {};
+        
+        getElement('submission-name').textContent = 
             `${params.get('firstName')} ${params.get('lastName')}`;
-        document.getElementById('submission-email').textContent = params.get('email');
-        document.getElementById('submission-phone').textContent = params.get('phone');
-        document.getElementById('submission-org').textContent = params.get('organization');
-        document.getElementById('submission-date').textContent = 
-            new Date(params.get('timestamp')).toLocaleString();
+        getElement('submission-email').textContent = params.get('email');
+        getElement('submission-phone').textContent = params.get('phone');
+        getElement('submission-org').textContent = params.get('organization');
+        
+        // Format date properly
+        const timestamp = params.get('timestamp');
+        if (timestamp) {
+            const options = {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            };
+            getElement('submission-date').textContent = 
+                new Date(timestamp).toLocaleDateString('en-US', options);
+        }
+    }
+});

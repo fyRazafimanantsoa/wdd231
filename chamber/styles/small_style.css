@@ -80,5 +80,9 @@
     .radio-group {
         grid-template-columns: 1fr;
     }
-    
+    .modal {
+        width: 95%;
+        max-width: none;
+        margin: 1rem auto;
+    }
 }
