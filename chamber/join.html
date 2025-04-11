@@ -149,11 +149,13 @@
                     </fieldset>
 
                     <input type="hidden" id="timestamp" name="timestamp">
+                    <div class="form-error" id="membershipError" aria-live="polite"></div>
                 </div>
                 <button type="submit" class="cta-button">Submit Membership Application</button>
             </form>
 
             <div class="membership-cards">
+                <!-- NP Membership Card -->
                 <article class="membership-card np">
                     <div class="card-content">
                         <h3>NP Membership</h3>
@@ -162,9 +164,10 @@
                             <li>Non-Profit Organizations</li>
                             <li>Basic Listing</li>
                         </ul>
-                        <button class="info-btn" data-modal="np-modal">View Benefits</button>
+                        <button class="info-btn" data-modal="np-modal" type="button">View Benefits</button>
                         <dialog id="np-modal" class="modal">
                             <div class="modal-content">
+                                <button class="close-modal" type="button" aria-label="Close">&times;</button>
                                 <h3>NP Membership Benefits</h3>
                                 <ul>
                                     <li>Non-profit organization listing</li>
@@ -172,12 +175,12 @@
                                     <li>Monthly newsletter</li>
                                     <li>Volunteer opportunities</li>
                                 </ul>
-                                <button class="close-modal">X</button>
                             </div>
                         </dialog>
                     </div>
                 </article>
 
+                <!-- Bronze Membership Card -->
                 <article class="membership-card bronze">
                     <div class="card-content">
                         <h3>Bronze</h3>
@@ -186,9 +189,10 @@
                             <li>Business Directory Listing</li>
                             <li>Monthly Newsletter</li>
                         </ul>
-                        <button class="info-btn" data-modal="bronze-modal">View Benefits</button>
+                        <button class="info-btn" data-modal="bronze-modal" type="button">View Benefits</button>
                         <dialog id="bronze-modal" class="modal">
                             <div class="modal-content">
+                                <button class="close-modal" type="button" aria-label="Close">&times;</button>
                                 <h3>Bronze Membership Benefits</h3>
                                 <ul>
                                     <li>Business directory listing</li>
@@ -196,12 +200,12 @@
                                     <li>10% event discounts</li>
                                     <li>Basic business support</li>
                                 </ul>
-                                <button class="close-modal">X</button>
                             </div>
                         </dialog>
                     </div>
                 </article>
 
+                <!-- Silver Membership Card -->
                 <article class="membership-card silver">
                     <div class="card-content">
                         <h3>Silver</h3>
@@ -211,9 +215,10 @@
                             <li>Event Discounts</li>
                             <li>Training Sessions</li>
                         </ul>
-                        <button class="info-btn" data-modal="silver-modal">View Benefits</button>
+                        <button class="info-btn" data-modal="silver-modal" type="button">View Benefits</button>
                         <dialog id="silver-modal" class="modal">
                             <div class="modal-content">
+                                <button class="close-modal" type="button" aria-label="Close">&times;</button>
                                 <h3>Silver Membership Benefits</h3>
                                 <ul>
                                     <li>All Bronze benefits</li>
@@ -222,12 +227,12 @@
                                     <li>Priority customer referrals</li>
                                     <li>Monthly training sessions</li>
                                 </ul>
-                                <button class="close-modal">X</button>
                             </div>
                         </dialog>
                     </div>
                 </article>
 
+                <!-- Gold Membership Card -->
                 <article class="membership-card gold">
                     <div class="card-content">
                         <h3>Gold</h3>
@@ -238,9 +243,10 @@
                             <li>VIP Event Access</li>
                             <li>Premium Support</li>
                         </ul>
-                        <button class="info-btn" data-modal="gold-modal">View Benefits</button>
+                        <button class="info-btn" data-modal="gold-modal" type="button">View Benefits</button>
                         <dialog id="gold-modal" class="modal">
                             <div class="modal-content">
+                                <button class="close-modal" type="button" aria-label="Close">&times;</button>
                                 <h3>Gold Membership Benefits</h3>
                                 <ul>
                                     <li>All Silver benefits</li>
@@ -250,7 +256,6 @@
                                     <li>Home page spotlight</li>
                                     <li>Dedicated business coach</li>
                                 </ul>
-                                <button class="close-modal">X</button>
                             </div>
                         </dialog>
                     </div>

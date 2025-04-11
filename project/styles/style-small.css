@@ -1,0 +1,74 @@
+/* Responsive design */
+@media (max-width: 768px) {
+    .nav-list {
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--neutral-light);
+      display: none;
+    }
+  
+    .nav-list.show {
+      display: flex;
+    }
+  
+    .nav-list a {
+      color: var(--neutral-dark);
+    }
+  
+    .lesson-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+  /* Existing component styles */
+  .feature, .news-item, .history-entry {
+    margin: 2rem auto;
+    padding: 2rem;
+    background: var(--neutral-light);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  /* Code editor specific styles */
+  .code-editor {
+    font-family: 'Fira Code', monospace;
+    min-height: 300px;
+    padding: 1rem;
+    background: var(--neutral-dark);
+    color: #fff;
+    border-radius: 8px;
+    border: 2px solid var(--primary-color);
+  }
+  
+  .preview-pane {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .run-button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .run-button:hover {
+    background: var(--button-hover);
+  }

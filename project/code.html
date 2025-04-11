@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Lab - All.In.Us</title>
+  <link rel="icon" href="images/A.I.U.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/styles-small.css">
+  <!-- Separate CSS for the Code Lab page -->
+  <link rel="stylesheet" href="styles/codeLab.css">
+  <meta name="author" content="Fy Razafimanantsoa">
+  <meta name="description" content="Practice coding with our interactive code lab and learn JavaScript basics.">
+  <script src="script/script.js" defer></script>
+  <!-- Separate JavaScript for the Code Lab page -->
+  <script src="script/codeLab.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+        <a href="home.html"><img class="image" src="images/A.I.U.png" alt="Logo"></a>
+        <a id="menu" href="#">☰</a>
+        <nav class="menu">
+          <a href="home.html">Home</a>
+          <a href="history.html">History</a>
+          <a href="community.html">Community</a>
+          <a href="code.html">Code</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <section class="code-lab">
+      <div class="editor-container">
+        <div class="code-editor">
+          <h3>HTML Editor</h3>
+          <textarea id="htmlEditor" class="editor"></textarea>
+          <button id="runHTML" class="run-button">Run HTML</button>
+        </div>
+        <div class="preview-pane">
+          <h3>Preview</h3>
+          <iframe id="htmlPreview"></iframe>
+        </div>
+      </div>
+
+      <div class="lesson-container" id="htmlLessons">
+        <h2>HTML Lessons</h2>
+        <!-- Lessons will be injected by JavaScript -->
+      </div>
+
+      <div class="lesson-container" id="cssLessons">
+        <h2>CSS Lessons</h2>
+        <!-- Lessons will be injected by JavaScript -->
+      </div>
+
+      <div class="lesson-container" id="jsLessons">
+        <h2>JavaScript Lessons</h2>
+        <!-- Lessons will be injected by JavaScript -->
+      </div>
+    </section>
+    <!-- HTML Code Lab Section -->
+    <section id="htmlLab">
+      <h1>Interactive Code Lab (HTML)</h1>
+      <p>Experiment with HTML code below and see the result instantly. Edit the code and click "Run Code" to preview your creation!</p>
+      <textarea id="codeEditor" placeholder="Type your HTML code here...">
+<!-- Example code -->
+<h2>Hello World!</h2>
+<p>This is a sample paragraph.</p>
+      </textarea>
+      <button id="runButton">Run Code</button>
+      <div id="preview">
+        <!-- Preview of the code will appear here -->
+      </div>
+    </section>
+
+    <!-- JavaScript Basics Section -->
+    <section id="jsBasics">
+      <h2>Learn JavaScript Basics</h2>
+      <p>Below is a sample JavaScript code snippet that demonstrates variables, functions, and alerts. Modify the code and click "Run JavaScript Code" to see the output.</p>
+      <textarea id="jsEditor" placeholder="Type your JavaScript code here...">
+// Sample JavaScript Code
+function greet(name) {
+    return "Hello, " + name + "!";
+}
+let user = "World";
+console.log(greet(user));
+alert(greet(user));
+      </textarea>
+      <button id="runJSButton">Run JavaScript Code</button>
+      <pre id="jsOutput"></pre>
+    </section>
+  </main>
+  <footer class="main-footer">
+    <p>&copy; <span id="currentyear"></span> Fy Razafimanantsoa, Madagascar</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
