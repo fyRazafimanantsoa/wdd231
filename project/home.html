@@ -3,83 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="All.In.Us Code Learning Platform">
-  <meta property="og:description" content="Learn web development through interactive coding exercises and community support">
-  <meta property="og:image" content="https://yoursite.com/images/og-banner.jpg">
-  <meta property="og:url" content="https://yoursite.com/home.html">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
   <title>All.In.Us</title>
   <link rel="icon" href="images/A.I.U.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/styles.css">
-  <link rel="stylesheet" href="styles/style-small.css">
+  <link rel="stylesheet" href="styles/styles-small.css">
   <meta name="author" content="Fy Razafimanantsoa">
   <meta name="description" content="This web site is a place to learn and motivate. As a blog I will share my coding journey and it will also serve as a material web site.">
   <script src="script/script.js" defer></script>
 </head>
 <body>
-  <header class="main-header">
+  <header>
     <div class="container">
-      <a href="home.html" class="brand">
-        <img src="images/A.I.U.png" alt="Logo" width="80">
-        <h1>All.In.Us</h1>
-      </a>
-      <nav class="main-nav">
-        <button id="menuToggle" aria-label="Toggle navigation">☰</button>
-        <ul class="nav-list">
-          <li><a href="home.html" class="active">Home</a></li>
-          <li><a href="history.html">History</a></li>
-          <li><a href="community.html">Community</a></li>
-          <li><a href="code.html">Code Lab</a></li>
-        </ul>
+        <a href="home.html"><img class="image" src="images/A.I.U.png" alt="All.In.Us logo"></a>
+        <a id="menu" href="#">☰</a>
+        <nav class="menu">
+          <a href="home.html">Home</a>
+          <a href="history.html">History</a>
+          <a href="community.html">Community</a>
+          <a href="code.html">Code</a>
       </nav>
     </div>
   </header>
-
-  <main class="container">
-    <section class="hero">
-      <h2>Learn Web Development</h2>
-      <p>Interactive coding environment with structured lessons and real-time feedback</p>
-      <div class="cta-buttons">
-        <a href="code.html" class="button primary">Start Coding</a>
-        <button id="learnMore" class="button secondary">Learn More</button>
-      </div>
+  <main> 
+    <section>
+      <a href="history.html">
+        <div class="B-one">
+          <h1>What is this page for?</h1>
+          <p>This page was built to share my path in learning code and especially Frontend development. I started this page today, July 25th, and wanted to share my story. I began to learn coding 1 month and a half ago about <em>HTML</em> and <em>CSS</em> and...</p>
+        </div>
+      </a>
+      <a href="community.html">
+        <div class="B-two">
+          <h1>Come to share your experience</h1>
+          <p>Share your journey with other users and empower them. Everyone has something unique about their journey and yours is needed by others. SAY IT!</p>
+        </div>
+      </a>
+      <a href="code.html">
+        <div class="B-three">
+          <h1>Learn from everyone</h1>
+          <p>Here we provide a place for YOU, beginners, to learn and for YOU, experts, to practice and share your experience with others. Mentor them and show it is <em>printed</em>!</p>
+        </div>
+      </a>
     </section>
-
-    <section class="faq-section">
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-grid">
-        <article class="faq-card">
-          <details>
-            <summary>What can I learn here?</summary>
-            <p>Our platform offers 30 structured lessons covering HTML, CSS, and JavaScript fundamentals through interactive coding exercises.</p>
-          </details>
-        </article>
-        <article class="faq-card">
-          <details>
-            <summary>Is this platform free?</summary>
-            <p>Yes! All our core learning resources are completely free to use. We believe in accessible coding education for everyone.</p>
-          </details>
-        </article>
+    <div class="feature">
+        <h1>News &amp; Updates</h1>
+        <section class="news">
+          <div class="news-item">
+            <h2>Responsive Design Enhanced</h2>
+            <p>We've updated the site's design to ensure a seamless experience on all devices. Enjoy the enhanced look and feel on your mobile, tablet, or desktop!</p>
+          </div>
+          <div class="news-item">
+            <h2>Interactive Code Lab Launched</h2>
+            <p>Test your HTML and CSS skills with our new Code Lab. Experiment with code and see the result instantly on the preview pane.</p>
+          </div>
+          <div class="news-item">
+            <h2>Coming Soon: Dark Mode</h2>
+            <p>Stay tuned for our upcoming dark mode feature—designed for those who prefer a low-light browsing experience. Launching next month!</p>
+          </div>
+        </section>
       </div>
-    </section>
-
-    <dialog id="featureModal" class="modal">
-      <h2>Platform Features</h2>
-      <ul class="feature-list">
-        <li>Interactive code editor with live preview</li>
-        <li>30+ structured coding lessons</li>
-        <li>Community support forum</li>
-        <li>Progress tracking</li>
-      </ul>
-      <button onclick="featureModal.close()" class="button">Close</button>
-    </dialog>
   </main>
-
-  <footer class="main-footer">
+  <footer>
     <p>&copy; <span id="currentyear"></span> Fy Razafimanantsoa, Madagascar</p>
     <p id="lastModified"></p>
   </footer>
