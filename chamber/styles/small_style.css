@@ -85,4 +85,31 @@
         max-width: none;
         margin: 1rem auto;
     }
+    .discover-main {
+        grid-template-columns: 300px 1fr;
+        grid-template-areas: "sidebar content";
+    }
+}
+
+@media (min-width: 641px) {
+    .discover-container {
+        grid-template-columns: 1fr 300px;
+        grid-template-areas: "cards sidebar";
+    }
+    
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1025px) {
+    .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (hover: hover) and (min-width: 641px) {
+    .attraction-card img:hover {
+        transform: scale(1.05);
+    }
 }

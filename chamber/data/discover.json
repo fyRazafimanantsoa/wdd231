@@ -1,0 +1,50 @@
+[
+    {
+        "title": "Rova of Antananarivo",
+        "image": "royal-palace.webp",
+        "address": "Antananarivo 101",
+        "description": "Historic royal palace complex offering panoramic views of the city."
+    },
+    {
+        "title": "Analakely Market",
+        "image": "analakely-market.webp",
+        "address": "Analakely District",
+        "description": "Vibrant open-air market famous for traditional crafts and local produce."
+    },
+    {
+        "title": "Lake Anosy",
+        "image": "anosy-lake.webp",
+        "address": "Anosy, Antananarivo",
+        "description": "Heart-shaped lake with iconic war memorial at its center."
+    },
+    {
+        "title": "Tsarasaotra Park",
+        "image": "tsarasaotra.webp", 
+        "address": "Alarobia",
+        "description": "Urban wetland sanctuary with diverse bird species."
+    },
+    {
+        "title": "Ambohijatovo Park",
+        "image": "ambohijatovo-park.webp",
+        "address": "Independence Avenue",
+        "description": "Central city park with colonial-era architecture."
+    },
+    {
+        "title": "Andafiavaratra Palace",
+        "image": "andafiavaratra.webp",
+        "address": "Haute Ville",
+        "description": "19th-century palace housing historical artifacts."
+    },
+    {
+        "title": "Iavoloha Palace",
+        "image": "iavoloha.webp",
+        "address": "Iavoloha",
+        "description": "Modern presidential palace in southern suburbs."
+    },
+    {
+        "title": "Zoological Park",
+        "image": "zoo.webp",
+        "address": "Tsimbazaza",
+        "description": "Botanical and zoological garden showcasing biodiversity."
+    }
+]
