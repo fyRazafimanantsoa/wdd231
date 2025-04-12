@@ -1,24 +1,32 @@
 :root {
-    --primary-dark: #2E4A3D;  
-    --primary-light: #E8F0EB; 
-    --accent: #0A6E6E;       
-    --text-dark: #333333;    
-    --text-light: #FFFFFF;   
-    --border: rgba(0,0,0,0.1); 
-    --shadow: rgba(0,0,0,0.15); 
+    /* Color Palette */
+    --primary-dark: #2E4A3D;
+    --primary-light: #E8F0EB;
+    --accent: #0A6E6E;
+    --text-dark: #333333;
+    --text-light: #FFFFFF;
+    --border: rgba(0, 0, 0, 0.1);
+    --shadow: rgba(0, 0, 0, 0.15);
+    
+    /* Typography */
+    --font-base: "Montserrat", sans-serif;
 }
 
+/* Base Styles */
 body {
     margin: 5px;
     padding: 5px;
     background-color: var(--primary-light);
     color: var(--text-dark);
-    font-family: "Montserrat", sans-serif;
-    font-style: normal;
+    font-family: var(--font-base);
     line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-header {
+/* Header */
+.site-header, header {
     margin: 3px 0 10px 0;
     width: 100%;
     height: 135px;
@@ -28,100 +36,123 @@ header {
     box-shadow: 2px 6px 10px 0 var(--shadow);
 }
 
-.image {
-    display: inline-block;
-    height: 100px;
-    width: auto;
-    margin: 0.5rem;
-}
-
-.container {
+.header-content, .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 30px;
 }
 
-.menu {
+.logo, .image {
+    height: 100px;
+    width: auto;
+    margin: 8px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover, .image:hover {
+    transform: scale(1.05);
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    justify-content: right;
-    text-decoration: none;
-    position: relative;
-    margin-right: 30px;
+    gap: 20px;
 }
 
-.menu a {
+/* Navigation */
+.main-nav, .menu {
+    display: flex;
+    gap: 20px;
+}
+
+
+.main-nav a, .menu a {
     padding: 0 40px;
     box-shadow: 1px 3px 5px 1px var(--shadow);
     background-color: var(--primary-light);
     color: var(--primary-dark);
-    margin: auto 20px;
-    width: 70px;
-    height: 35px;
     display: flex;
-    text-align: center;
-    justify-content: center;
     align-items: center;
-    transition: transform 0.5s ease;
-    font-weight: 600; /* Improved readability */
-    border-radius: 4px; /* Better click target */
-}
-
-.menu a:hover {
-    transform: scale(1.05);
-}
-
-a, .news p {
-    color: var(--primary-dark);
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    border-radius: 4px;
+    min-width: 70px;
+    height: 35px;
     text-decoration: none;
 }
 
-.B-one, .B-two, .B-three {
+.main-nav a:hover, .menu a:hover {
+    transform: scale(1.05);
+    background-color: var(--accent);
+    color: var(--text-light);
+}
+
+/* Content Sections - Added support for both old and new classes */
+.content-card, .B-one, .B-two, .B-three {
     border: 1px solid var(--border);
     box-shadow: 5px 5px 10px 2.5px var(--shadow);
     margin: 50px 20px 40px;
     padding: 10px 0 0 20px;
     width: 800px;
-    height: 180px;
-    cursor: pointer;
+    min-height: 180px;
     color: var(--text-light);
-    text-decoration: none;
     transition: transform 0.5s ease;
     background-color: var(--primary-dark);
-    border-radius: 8px; /* Better accessibility */
+    border-radius: 8px;
 }
 
-.B-two {
+.content-card:hover, .B-one:hover, .B-two:hover, .B-three:hover {
+    transform: scale(1.02);
+}
+
+.content-card-right, .B-two {
     margin-left: auto;
     margin-right: 30px;
 }
 
-.B-one:hover, .B-two:hover, .B-three:hover {
-    transform: scale(1.05);
+.content-card h1, .B-one h1, .B-two h1, .B-three h1 {
+    margin-top: 0;
+    font-size: 1.8rem;
 }
 
-.feature {
-    margin: 10rem auto 5rem;
+/* Feature Section - Supporting both classes */
+.feature-section, .feature {
+    margin: 160px auto 80px;
     text-align: center;
     background-color: var(--accent);
     color: var(--text-light);
     padding: 10px 0;
-    font-size: 20px;
     width: 90%;
-    height: 700px;
-    overflow: hidden;
+    min-height: 700px;
     border-radius: 8px;
 }
 
-.news {
+.news-container, .news {
     display: block;
-    margin: 1rem auto;
+    margin: 16px auto;
     width: 95%;
-    padding: 1rem;
+    padding: 16px;
     background-color: var(--primary-light);
 }
 
 .news-item {
-    margin: 1rem 0;
-    padding: 1rem;
+    margin: 16px 0;
+    padding: 16px;
     border: 1px solid var(--accent);
     background-color: var(--accent);
     box-shadow: 2px 2px 5px var(--shadow);
@@ -129,8 +160,12 @@ a, .news p {
     border-radius: 4px;
 }
 
+.news-item:hover {
+    transform: scale(1.01);
+}
+
 .news-item h2 {
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 8px 0;
     font-size: 1.5rem;
     color: var(--text-light);
 }
@@ -140,115 +175,18 @@ a, .news p {
     color: var(--text-light);
 }
 
-.news-item:hover {
-    transform: scale(1.05);
-}
-
 footer {
     padding-top: 5px;
     text-align: center;
-    margin: 0;
+    margin-top: auto;
     width: 100%;
     height: 100px;
     background-color: var(--primary-dark);
-    position: relative;
     color: var(--text-light);
 }
 
-#jsBasics {
-    margin: 2rem auto;
-    width: 90%;
-    padding: 1rem;
-    background-color: var(--text-light);
-    color: var(--text-dark);
-    border: 1px solid var(--border);
-    border-radius: 5px;
-}
 
-#jsBasics h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: var(--primary-dark);
-}
-
-#jsBasics p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    line-height: 1.6;
-}
-
-#jsEditor {
-    width: 100%;
-    height: 150px;
-    font-family: monospace;
-    font-size: 1rem;
-    padding: 0.5rem;
-    border: 1px solid var(--accent);
-    margin-bottom: 1rem;
-    box-shadow: 2px 2px 5px var(--shadow);
-}
-
-#runJSButton {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: var(--primary-dark);
-    color: var(--text-light);
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    box-shadow: 1px 1px 3px var(--shadow);
-    transition: background-color 0.3s ease;
-    border-radius: 4px;
-    font-weight: 600;
-}
-
-#runJSButton:hover {
-    background-color: var(--accent);
-}
-
-#jsOutput {
-    background-color: var(--text-light);
-    color: var(--text-dark);
-    padding: 0.5rem;
-    border: 1px solid var(--accent);
-    min-height: 50px;
-    font-family: monospace;
-    white-space: pre-wrap;
-    border-radius: 4px;
-}
-
-.history-entry {
-    background-color: var(--primary-dark);
-    color: var(--text-light);
-    height: 150px;
-    width: 80%;
-    margin: auto;
-    margin-bottom: 1rem;
-    padding: 2rem;
-    border-radius: 8px;
-}
-
-.title {
-    background-color: var(--primary-dark);
-    box-shadow: 2px 2px 5px var(--shadow);
-    padding: 1rem;
-    margin: 1rem;
-    text-align: center;
-    color: var(--text-light);
-    border-radius: 8px;
-}
-
-#communityForm {
-    display: grid;
-    background-color: var(--primary-dark);
-    color: var(--text-light);
-    height: 400px;
-    padding: 1rem;
-    border-radius: 8px;
-}
-
-#username {
+.form-input {
     width: 20%;
     height: 35px;
     overflow: auto;
@@ -256,17 +194,17 @@ footer {
     border: 1px solid var(--border);
 }
 
-#journey {
+.form-textarea {
     width: 50%;
     height: 70px;
     border-radius: 4px;
     border: 1px solid var(--border);
 }
 
-button {
+.submit-button {
     margin: 0 0 0 auto;
     right: 0%;
-    height: 2.5rem;
+    height: 40px;
     width: 20%;
     background-color: var(--accent);
     color: var(--text-light);
@@ -274,40 +212,9 @@ button {
     border-radius: 4px;
     font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-#stories {
-    max-width: 1380px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: var(--primary-light);
-    border-radius: 8px;
-    box-shadow: 0 2px 8px var(--shadow);
-}
-
-#stories .story {
-    background-color: var(--text-light);
-    padding: 15px;
-    border: 1px solid var(--border);
-    margin-bottom: 15px;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
-}
-
-#stories .story h3 {
-    margin: 0 0 10px;
-    font-size: 1.3em;
-    color: var(--primary-dark);
-}
-
-#stories .story p {
-    margin: 0;
-    font-size: 1em;
-    color: var(--text-dark);
-}
-
-#stories .story hr {
-    margin-top: 15px;
-    border: 0;
-    border-top: 1px solid var(--border);
+.submit-button:hover {
+    background-color: var(--primary-dark);
 }

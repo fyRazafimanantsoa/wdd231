@@ -1,118 +1,131 @@
+/* Mobile Styles (760px and below) */
 @media screen and (max-width: 760px) {
-    #menu {
-        display: block;
-        margin-left: 7rem;
-        font-size: 25px;
-        font-weight: 700;
-        text-decoration: none;
-        padding: .5rem .75rem;
-        color: var(--text-light);
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
+    /* Base Layout Adjustments */
+    body {
+        margin: 0;
+        padding: 0;
     }
-    
-    #menu::before {
-        content: "☰";
+
+    .site-header {
+        height: 80px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
     }
-    
-    #menu.show::before {
-        content: "✕";
+
+    .header-content {
+        padding: 0 var(--space-md);
     }
-    
+
+    .image {
+        height: 60px;
+        margin: var(--space-sm) 0;
+    }
+
+    /* Mobile Navigation */
     .menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100px;
+        position: fixed;
+        top: 80px;
         left: 0;
         right: 0;
         background-color: var(--primary-light);
-        z-index: 1000;
-        margin-right: 0;
+        flex-direction: column;
+        align-items: stretch;
         padding: 0;
         box-shadow: 0 4px 8px var(--shadow);
+        transform: translateY(-150%);
+        transition: transform 0.3s ease-out;
+        z-index: 999;
     }
-    
-    .menu.show {
-        display: flex;
+
+    .menu.active {
+        transform: translateY(0);
     }
-    
+
     .menu a {
-        padding: 15px;
-        text-align: center;
         width: 100%;
-        border-bottom: 1px solid var(--border);
         margin: 0;
-        box-shadow: none;
+        padding: var(--space-lg);
         border-radius: 0;
-        color: var(--primary-dark);
-        background-color: var(--primary-light);
+        border-bottom: 1px solid var(--border);
+        justify-content: flex-start;
+        box-shadow: none;
     }
-    
-    .menu a:hover {
-        background-color: var(--accent);
+
+    .hamburger {
+        display: none;
+        background: none;
+        border: none;
         color: var(--text-light);
-        transform: none;
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 0.5rem;
     }
     
-    header {
-        height: 100px;
+    .nav-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
+        gap: 20px;
     }
-    
-    .image {
-        height: 80px;
-        width: auto;
+
+    /* Content Cards */
+    .content-card {
+        width: calc(100% - 2 * var(--space-md));
+        margin: var(--space-lg) auto;
+        padding: var(--space-md);
+        min-height: auto;
     }
-    
-    .container {
-        flex-direction: column;
-    }
-    
-    .B-one, .B-two, .B-three {
-        width: 90%;
-        height: auto;
-        min-height: 120px;
-        margin: 20px auto;
-        padding: 15px;
-    }
-    
+
     .B-two {
-        margin-left: auto;
         margin-right: auto;
     }
-    
-    .feature {
-        margin: 5rem auto;
-        height: auto;
-        padding: 20px 0;
+
+    /* Feature Section */
+    .feature-section {
+        margin: var(--space-xl) auto;
+        width: 100%;
+        min-height: auto;
+        padding: var(--space-md);
+        border-radius: 0;
     }
-    
-    #communityForm {
-        height: auto;
-        padding: 20px;
+
+    /* News Section */
+    .news-container {
+        width: 100%;
+        padding: var(--space-md);
+        border-radius: 0;
     }
-    
+
+    /* Form Elements */
     #username, #journey {
-        width: 90%;
-        margin: 10px auto;
+        width: 100%;
     }
-    
-    button {
-        width: 90%;
-        margin: 10px auto;
+
+    button[type="submit"] {
+        width: 100%;
     }
-    
-    .history-entry {
-        width: 90%;
+
+    /* Footer */
+    footer {
         height: auto;
-        padding: 20px;
+        padding: var(--space-md) 0;
     }
 }
 
-#menu {
-    display: none;
+/* Small screen tweaks (480px and below) */
+@media screen and (max-width: 480px) {
+    :root {
+        --space-md: 0.75rem;
+        --space-lg: 1rem;
+    }
+
+    .content-card h1 {
+        font-size: var(--text-xl);
+    }
+
+    .news-item h2 {
+        font-size: var(--text-lg);
+    }
 }

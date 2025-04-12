@@ -15,16 +15,19 @@
   <script src="script/script.js" defer></script>
 </head>
 <body>
-  <header>
-    <div class="container">
+  <header class="site-header">
+    <div class="header-content">
         <a href="home.html"><img class="image" src="images/A.I.U.png" alt="All.In.Us logo"></a>
-        <a id="menu" href="#">☰</a>
-        <nav class="menu">
-          <a href="home.html">Home</a>
-          <a href="history.html">History</a>
-          <a href="community.html">Community</a>
-          <a href="code.html">Code</a>
-      </nav>
+        <button id="menu" aria-label="Navigation Menu"></button>
+        <nav class="menu"> 
+            <button class="hamburger" aria-label="Menu">☰</button>
+            <ul class="nav-list">
+                <a href="home.html">Home</a>
+                <a href="history.html">History</a>
+                <a href="community.html">Community</a>
+                <a href="code.html">Code</a>
+            </ul>
+        </nav>
     </div>
   </header>
   <main> 

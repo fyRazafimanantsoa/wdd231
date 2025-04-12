@@ -8,14 +8,21 @@ const lastModified = document.lastModified;
 const lastModifiedParagraph = document.getElementById("lastModified");
 lastModifiedParagraph.textContent = `Last Modified: ${lastModified}`;
 
-document.addEventListener('DOMContentLoaded', function() {
-    const menu = document.getElementById('menu');
-    const nav = document.querySelector('.menu');
 
-    menu.addEventListener('click', function() {
-        nav.classList.toggle('show');
-        menu.textContent = nav.classList.contains('show') ? '✖' : '☰';
-    });
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.querySelector('.hamburger');
+  const mainNav = document.querySelector('.main-nav');
+  
+  hamburger.addEventListener('click', () => {
+      mainNav.classList.toggle('active');
+      hamburger.textContent = mainNav.classList.contains('active') ? '✕' : '☰';
+  });
+  
+  // Update copyright year
+  document.getElementById('currentyear').textContent = new Date().getFullYear();
+  
+  // Update last modified date
+  document.getElementById('lastModified').textContent = `Last Modified: ${document.lastModified}`;
 });
 
 document.getElementById('communityForm').addEventListener('submit', function(event) {
