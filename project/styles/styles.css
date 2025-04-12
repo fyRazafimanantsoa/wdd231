@@ -218,3 +218,53 @@ footer {
 .submit-button:hover {
     background-color: var(--primary-dark);
 }
+
+
+.scenarios {
+    background-color: var(--primary-light);
+    padding: 2rem;
+    margin: 1rem;
+  }
+  
+  .scenarios-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .scenarios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    align-items: stretch;
+  }
+  
+  .scenario-card {
+    background-color: var(--text-light);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+  }
+  
+  .scenario-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+  
+  .scenario-card h2 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+  }
+  
+  .scenario-card p {
+    color: var(--text-dark);
+    font-style: italic;
+    position: relative;
+    padding: 0 1rem;
+    line-height: 1.6;
+  }
+  
