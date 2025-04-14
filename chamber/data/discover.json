@@ -3,48 +3,56 @@
         "title": "Rova of Antananarivo",
         "image": "royal-palace.webp",
         "address": "Antananarivo 101",
-        "description": "Historic royal palace complex offering panoramic views of the city."
+        "description": "Historic royal palace complex offering panoramic views of the city.",
+        "infos": "The Rova of Antananarivo, perched high above the capital, once served as the residence of Merina monarchs. Walking through its grounds is like stepping back in time to the heart of Malagasy royalty and its rich cultural heritage."
     },
     {
         "title": "Analakely Market",
         "image": "analakely-market.webp",
         "address": "Analakely District",
-        "description": "Vibrant open-air market famous for traditional crafts and local produce."
+        "description": "Vibrant open-air market famous for traditional crafts and local produce.",
+        "infos": "Analakely Market is the pulse of Antananarivo, where friendly vendors offer colorful stalls of spices, crafts, and everyday essentials. A perfect place to feel the authentic rhythm of Malagasy street life."
     },
     {
         "title": "Lake Anosy",
         "image": "anosy-lake.webp",
         "address": "Anosy, Antananarivo",
-        "description": "Heart-shaped lake with iconic war memorial at its center."
+        "description": "Heart-shaped lake with iconic war memorial at its center.",
+        "infos": "Surrounded by jacaranda trees that bloom violet in spring, Lake Anosy offers a peaceful escape from the city's buzz. The central monument honors those who lost their lives in World War I, adding historical depth to its natural beauty."
     },
     {
         "title": "Tsarasaotra Park",
         "image": "tsarasaotra.webp", 
         "address": "Alarobia",
-        "description": "Urban wetland sanctuary with diverse bird species."
+        "description": "Urban wetland sanctuary with diverse bird species.",
+        "infos": "A hidden gem in the middle of Antananarivo, Tsarasaotra Park is a sanctuary for birdwatchers and nature lovers. This privately-owned wetland is Madagascar’s first Ramsar site and home to rare and endemic species."
     },
     {
         "title": "Ambohijatovo Park",
         "image": "ambohijatovo-park.webp",
         "address": "Independence Avenue",
-        "description": "Central city park with colonial-era architecture."
+        "description": "Central city park with colonial-era architecture.",
+        "infos": "Ambohijatovo Park offers a charming mix of open lawns, old trees, and colonial design. It’s a peaceful place to relax, read a book, or people-watch while being close to the heart of Antananarivo’s bustling center."
     },
     {
         "title": "Andafiavaratra Palace",
         "image": "andafiavaratra.webp",
         "address": "Haute Ville",
-        "description": "19th-century palace housing historical artifacts."
+        "description": "19th-century palace housing historical artifacts.",
+        "infos": "The Andafiavaratra Palace, with its distinct red-brick facade, once housed Prime Minister Rainilaiarivony. Today it exhibits salvaged treasures and offers a unique glimpse into the political life of 19th-century Madagascar."
     },
     {
         "title": "Iavoloha Palace",
         "image": "iavoloha.webp",
         "address": "Iavoloha",
-        "description": "Modern presidential palace in southern suburbs."
+        "description": "Modern presidential palace in southern suburbs.",
+        "infos": "Iavoloha Palace, an elegant modern estate framed by Madagascar’s scenic hills, is the official presidential residence. Its architecture merges contemporary style with traditional Malagasy touches, representing the country's leadership."
     },
     {
         "title": "Zoological Park",
         "image": "zoo.webp",
         "address": "Tsimbazaza",
-        "description": "Botanical and zoological garden showcasing biodiversity."
+        "description": "Botanical and zoological garden showcasing biodiversity.",
+        "infos": "Known as Parc Botanique et Zoologique de Tsimbazaza, this park houses lemurs, reptiles, birds, and plants endemic to Madagascar. A great educational stop for understanding the island’s one-of-a-kind biodiversity."
     }
 ]

@@ -32,6 +32,7 @@ const Navigation = {
         });
     }
 };
+Navigation.init();
 
 // Weather Module
 const Weather = {
@@ -199,64 +200,79 @@ const FormHandler = {
 // Discover Module
 const Discover = {
     init: () => {
-        if(!document.getElementById('attractionsGrid')) return;
+        if (!document.getElementById('attractionsGrid')) return;
         Discover.loadAttractions();
         Discover.handleVisitMessage();
+        Discover.bindDialogClose();
     },
 
     loadAttractions: async () => {
-        const data = await Utils.fetchData('data/discover.json', 'Failed to load attractions');
-        if(data) Discover.displayAttractions(data);
+        try {
+            const response = await fetch('data/discover.json');
+            if (!response.ok) throw new Error('Failed to load attractions.');
+            const data = await response.json();
+            Discover.displayAttractions(data);
+        } catch (error) {
+            console.error(error.message);
+        }
     },
 
-    displayAttractions(attractions) {
+    displayAttractions: (attractions) => {
         const grid = document.getElementById('attractionsGrid');
-        grid.innerHTML = attractions.map(attraction => `
+        grid.innerHTML = attractions.map((attraction, index) => `
             <article class="attraction-card">
                 <figure>
-                    <img src="images/${attraction.image}" 
-                         alt="${attraction.title}" 
-                         loading="lazy">
+                    <img src="images/${attraction.image}" alt="${attraction.title}" loading="lazy">
                 </figure>
                 <div class="card-content">
                     <h2>${attraction.title}</h2>
                     <address>${attraction.address}</address>
                     <p>${attraction.description}</p>
-                    <button aria-label="Learn more about ${attraction.title}">
-                        Learn More
-                    </button>
+                    <button aria-label="Learn more about ${attraction.title}" data-index="${index}">Learn More</button>
                 </div>
             </article>
         `).join('');
+
+        document.querySelectorAll('.attraction-card button').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const index = e.target.dataset.index;
+                Discover.showDialog(attractions[index]);
+            });
+        });
+    },
+
+    showDialog: (attraction) => {
+        const dialog = document.getElementById('attraction-dialog');
+        document.getElementById('dialogTitle').textContent = attraction.title;
+        document.getElementById('dialogAddress').textContent = attraction.address;
+        document.getElementById('dialogInfos').textContent = attraction.infos;
+        dialog.showModal();
+    },
+
+    bindDialogClose: () => {
+        const dialog = document.getElementById('attraction-dialog');
+        document.getElementById('dialog-close').addEventListener('click', () => {
+            dialog.close();
+        });
     },
 
     handleVisitMessage: () => {
         const lastVisit = localStorage.getItem('lastVisit');
-        const currentDate = Date.now();
+        const now = Date.now();
         let message = "Welcome! Let us know if you have any questions.";
 
-        if(lastVisit) {
-            const daysBetween = Math.floor((currentDate - lastVisit) / 86400000);
-            message = daysBetween === 0 ? "Back so soon! Awesome!" : 
-                `You last visited ${daysBetween} day${daysBetween !== 1 ? 's' : ''} ago.`;
+        if (lastVisit) {
+            const days = Math.floor((now - lastVisit) / 86400000);
+            message = days === 0 
+                ? "Back so soon! Awesome!" 
+                : `You last visited ${days} day${days !== 1 ? 's' : ''} ago.`;
         }
 
         document.getElementById('visitMessage').textContent = message;
-        localStorage.setItem('lastVisit', currentDate);
+        localStorage.setItem('lastVisit', now);
     }
 };
 
-// Main Initialization
 document.addEventListener('DOMContentLoaded', () => {
-    // Common Initialization
-    Navigation.init();
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
-    document.getElementById('lastModified').textContent = document.lastModified;
-
-    // Page-Specific Initialization
-    Weather.init();
-    Members.init();
-    ViewToggle.init();
-    FormHandler.init();
     Discover.init();
 });
