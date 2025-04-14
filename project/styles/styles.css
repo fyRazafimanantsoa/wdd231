@@ -102,25 +102,31 @@ body {
     color: var(--text-light);
 }
 
-/* Content Sections - Added support for both old and new classes */
-.content-card, .B-one, .B-two, .B-three {
+/* Content Sections */
+.content_card a {
+    text-decoration: none;
+    color: inherit; 
+  }
+.B-one, .B-two, .B-three {
     border: 1px solid var(--border);
     box-shadow: 5px 5px 10px 2.5px var(--shadow);
     margin: 50px 20px 40px;
     padding: 10px 0 0 20px;
-    width: 800px;
+    width: 50%;
     min-height: 180px;
     color: var(--text-light);
     transition: transform 0.5s ease;
     background-color: var(--primary-dark);
     border-radius: 8px;
+    text-decoration-line: none;
+    text-decoration: none;
 }
 
-.content-card:hover, .B-one:hover, .B-two:hover, .B-three:hover {
+.B-one:hover, .B-two:hover, .B-three:hover {
     transform: scale(1.02);
 }
 
-.content-card-right, .B-two {
+.B-two {
     margin-left: auto;
     margin-right: 30px;
 }
@@ -130,7 +136,7 @@ body {
     font-size: 1.8rem;
 }
 
-/* Feature Section - Supporting both classes */
+/* Feature Section */
 .feature-section, .feature {
     margin: 160px auto 80px;
     text-align: center;
