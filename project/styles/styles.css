@@ -44,6 +44,7 @@ body {
     padding: 0 30px;
 }
 
+/* Logo Styles */
 .logo, .image {
     height: 100px;
     width: auto;
@@ -55,6 +56,7 @@ body {
     transform: scale(1.05);
 }
 
+/* Hamburger Menu */
 .hamburger {
     display: none;
     background: none;
@@ -65,6 +67,7 @@ body {
     padding: 0.5rem;
 }
 
+/* Navigation List */
 .nav-list {
     list-style: none;
     padding: 0;
@@ -72,6 +75,24 @@ body {
     display: flex;
     gap: 20px;
 }
+
+/* Navigation Links */
+.nav-list li {
+    display: inline-block;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-list li a:hover {
+    color: var(--accent);
+    transform: translateY(-2px);
+}
+
 
 /* Navigation */
 .main-nav, .menu {
@@ -274,3 +295,47 @@ footer {
     line-height: 1.6;
   }
   
+
+/* Color Schema Display Styles */
+.color-schema {
+    margin: 2rem 0;
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .color-box {
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    color: var(--text-light);
+    border: 1px solid var(--border);
+  }
+  
+  .primary-dark { background-color: var(--primary-dark); }
+  .primary-light { background-color: var(--primary-light); color: var(--text-dark); }
+  .accent { background-color: var(--accent); }
+  .text-dark { background-color: var(--text-dark); }
+  
+  /* Typography Display Styles */
+  .typography {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+  }
+  
+  .font-example {
+    padding: 0.5rem;
+    margin: 1rem 0;
+  }
+  
+  .montserrat-regular {
+    font-family: var(--font-base);
+    font-weight: 400;
+  }
+  
+  .montserrat-bold {
+    font-family: var(--font-base);
+    font-weight: 700;
+  }

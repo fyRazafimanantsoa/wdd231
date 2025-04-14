@@ -1,9 +1,9 @@
 :root {
     --primary-color: #2c3e50;
-    --secondary-color: #3498db;
-    --accent-color: #e67e22;
-    --text-color: #333;
-    --background-color: #f8f9fa;
+    --secondary-color: #217dbb; 
+    --accent-color: #c75d0b; 
+    --text-color: #212121; 
+    --background-color: #f8f9fa; 
     --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
     --border-radius: 12px;
@@ -826,7 +826,7 @@ dialog[open] {
 }
 
 
-/* Discover Page Specific Styles */
+/* Discover Page */
 .discover-main {
     max-width: 1200px;
     margin: 2rem auto;
@@ -834,8 +834,8 @@ dialog[open] {
     display: grid;
     gap: 2rem;
     grid-template-areas: 
-        "sidebar"
-        "content";
+    "sidebar"
+    "content";
 }
 
 .visit-sidebar {
@@ -851,7 +851,7 @@ dialog[open] {
     grid-area: content;
     display: grid;
     gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .attraction-card {
@@ -919,5 +919,42 @@ dialog[open] {
     background: #2980b9;
 }
 
+#attraction-dialog {
+    margin: 10rem ;
+    width: 80%;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    border: none;
+    box-shadow: var(--card-shadow);
+}
+
+#attraction-dialog h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+#attraction-dialog address {
+    font-style: normal;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+#attraction-dialog p {
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+#dialog-close {
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+#dialog-close:hover {
+    background: #2980b9;
+}
 
 
