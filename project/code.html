@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,71 +8,97 @@
   <link rel="icon" href="images/A.I.U.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="styles/styles-small.css">
   <link rel="stylesheet" href="styles/codeLab.css">
   <meta property="og:title" content="Code Lab - All.In.Us">
-  <meta property="og:description" content="Practice coding with our interactive Code Lab and learn JavaScript basics with the All.In.Us community.">
+  <meta property="og:description"
+    content="Practice coding with our interactive Code Lab and learn JavaScript basics with the All.In.Us community.">
   <meta property="og:image" content="https://fyrazafimanantsoa.github.io/wdd231/project/images/A.I.U.png">
   <meta property="og:url" content="https://fyrazafimanantsoa.github.io/wdd231/project/code.html">
   <meta property="og:type" content="website">
   <meta name="author" content="Fy Razafimanantsoa">
-  <meta name="description" content="Practice coding with our interactive Code Lab and learn JavaScript basics with the All.In.Us community.">
-  <script src="script/script.js" defer></script>
-  <script src="script/codeLab.js" defer></script>
+  <meta name="description"
+    content="Practice coding with our interactive Code Lab and learn JavaScript basics with the All.In.Us community.">
+  <script src="script.js" defer></script>
+  <script src="code-lab.js" defer></script>
 </head>
+
 <body>
   <header class="site-header">
     <div class="header-content">
-        <a href="index.html"><img class="image" src="images/A.I.U.png" alt="All.In.Us logo"></a>
-        <nav class="menu"> 
-            <button class="hamburger" aria-label="Menu">☰</button>
-            <ul class="nav-list">
-                <a href="index.html">Home</a>
-                <a href="history.html">History</a>
-                <a href="community.html">Community</a>
-                <a href="code.html">Code</a>
-            </ul>
-        </nav>
+      <a href="index.html"><img class="image" src="images/A.I.U.png" alt="All.In.Us logo" loading="lazy" /></a>
+      <nav class="main-nav">
+        <button class="hamburger" aria-label="Menu">☰</button>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="code.html" class="active">Code</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
   <main>
-    <!-- HTML Code Lab Section -->
+    <!-- Interactive Code Lab Section -->
     <section id="htmlLab">
-      <h1>Interactive Code Lab (HTML)</h1>
-      <p>Experiment with HTML code below and see the result instantly. Edit the code and click "Run Code" to preview your creation!</p>
+      <h1>Interactive Code Lab</h1>
+      <p>
+        Experiment with your HTML and JavaScript code below. Edit the code and
+        click "Run Code" to preview your creation instantly!
+      </p>
       <textarea id="codeEditor" placeholder="Type your HTML code here...">
-<!-- Example code -->
-<h2>Hello World!</h2>
-<p>This is a sample paragraph.</p>
+        <!-- Example code -->
+        <h2>Hello, All.In.Us!</h2>
+        <p>Experiment with interactive code and learn by doing.</p>
       </textarea>
       <button id="runButton">Run Code</button>
-      <div id="preview">
-        <!-- Preview of the code will appear here -->
-      </div>
+      <div id="preview"></div>
     </section>
 
     <!-- JavaScript Basics Section -->
     <section id="jsBasics">
-      <h2>Learn JavaScript Basics</h2>
-      <p>Below is a sample JavaScript code snippet that demonstrates variables, functions, and alerts. Modify the code and click "Run JavaScript Code" to see the output.</p>
+      <h2>JavaScript Basics</h2>
+      <p>
+        Modify the JavaScript snippet below and hit "Run JavaScript Code" to see the output in real time.
+      </p>
       <textarea id="jsEditor" placeholder="Type your JavaScript code here...">
-// Sample JavaScript Code
-function greet(name) {
-    return "Hello, " + name + "!";
-}
-let user = "World";
-console.log(greet(user));
-alert(greet(user));
+          // Sample JavaScript Code
+            function greet(name) {
+            return `Hello, ${name}!`;
+            }
+            const user = 'World';
+            console.log(greet(user));
+            alert(greet(user));
       </textarea>
       <button id="runJSButton">Run JavaScript Code</button>
       <pre id="jsOutput"></pre>
+    </section>
+
+    <!-- Lessons Section -->
+    <section id="lessonsSection">
+      <h2>Learn with Curated Lessons</h2>
+      <p>Select a category below to see lessons you can start learning right here.</p>
+
+      <!-- Lesson Tabs -->
+      <div id="lessonTabs" class="tabs">
+        <button class="lesson-tab active" data-category="html">HTML Lessons</button>
+        <button class="lesson-tab" data-category="css">CSS Lessons</button>
+        <button class="lesson-tab" data-category="javascript">JavaScript Lessons</button>
+      </div>
+      <!-- Lesson Content Container -->
+      <div id="lessonContent" class="lessons-content">
+        <!-- Dynamic lessons will be loaded here -->
+      </div>
     </section>
   </main>
   <footer>
     <p>&copy; <span id="currentyear"></span> Fy Razafimanantsoa, Madagascar</p>
     <p id="lastModified"></p>
+    <p><a href="attributions.html">Attributions</a></p>
   </footer>
 </body>
+
 </html>
