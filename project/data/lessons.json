@@ -1,0 +1,98 @@
+{
+    "html": [
+      {
+        "title": "Basic HTML Structure",
+        "description": "Fundamental HTML document structure with essential tags",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Document</title>\n</head>\n<body>\n    <!-- Content -->\n</body>\n</html>",
+        "duration": "10 mins"
+      },
+      {
+        "title": "Forms & Inputs",
+        "description": "Create interactive forms with validation",
+        "code": "<form id=\"signup\">\n    <label for=\"email\">Email:</label>\n    <input type=\"email\" id=\"email\" required>\n    \n    <label for=\"password\">Password:</label>\n    <input type=\"password\" id=\"password\" minlength=\"8\" required>\n    \n    <button type=\"submit\">Register</button>\n</form>",
+        "duration": "20 mins"
+      },
+      {
+        "title": "Semantic HTML",
+        "description": "Proper semantic markup for accessibility",
+        "code": "<article>\n    <header>\n        <h2>Blog Post</h2>\n        <time datetime=\"2024-03-15\">March 15, 2024</time>\n    </header>\n    <section>\n        <p>Article content...</p>\n        <figure>\n            <img src=\"image.jpg\" alt=\"Description\">\n            <figcaption>Image caption</figcaption>\n        </figure>\n    </section>\n    <footer>\n        <p>Author: John Doe</p>\n    </footer>\n</article>",
+        "duration": "25 mins"
+      },
+      {
+        "title": "Multimedia Embedding",
+        "description": "Embed video and audio content",
+        "code": "<video controls width=\"600\">\n    <source src=\"video.mp4\" type=\"video/mp4\">\n    Your browser does not support videos\n</video>\n\n<audio controls>\n    <source src=\"audio.mp3\" type=\"audio/mpeg\">\n    Audio not supported\n</audio>",
+        "duration": "15 mins"
+      },
+      {
+        "title": "Data Tables",
+        "description": "Create accessible data tables",
+        "code": "<table>\n    <caption>Monthly Sales</caption>\n    <thead>\n        <tr>\n            <th scope=\"col\">Month</th>\n            <th scope=\"col\">Sales</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>January</td>\n            <td>$2000</td>\n        </tr>\n        <tr>\n            <td>February</td>\n            <td>$2500</td>\n        </tr>\n    </tbody>\n</table>",
+        "duration": "20 mins"
+      }
+    ],
+    "css": [
+      {
+        "title": "CSS Grid Layout",
+        "description": "Create complex layouts with CSS Grid",
+        "code": ".container {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    gap: 20px;\n}\n\n.item {\n    background: #f0f0f0;\n    padding: 20px;\n    border-radius: 8px;\n}",
+        "duration": "25 mins"
+      },
+      {
+        "title": "Responsive Design",
+        "description": "Media queries for responsive layouts",
+        "code": "/* Mobile first */\n.container {\n    padding: 10px;\n}\n\n@media (min-width: 768px) {\n    .container {\n        padding: 20px;\n        max-width: 1200px;\n        margin: 0 auto;\n    }\n}\n\n@media (min-width: 1024px) {\n    .container {\n        display: grid;\n        grid-template-columns: 1fr 3fr;\n    }\n}",
+        "duration": "30 mins"
+      },
+      {
+        "title": "CSS Animations",
+        "description": "Create smooth animations",
+        "code": "@keyframes slide-in {\n    from {\n        transform: translateX(-100%);\n    }\n    to {\n        transform: translateX(0);\n    }\n}\n\n.element {\n    animation: slide-in 0.5s ease-out forwards;\n}",
+        "duration": "20 mins"
+      },
+      {
+        "title": "Flexbox Alignment",
+        "description": "Center elements with Flexbox",
+        "code": ".container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 100vh;\n}\n\n.item {\n    padding: 20px;\n    background: #f0f0f0;\n}",
+        "duration": "15 mins"
+      },
+      {
+        "title": "Custom Properties",
+        "description": "CSS variables for maintainable styles",
+        "code": ":root {\n    --primary-color: #2ecc71;\n    --spacing: 1rem;\n}\n\n.button {\n    padding: var(--spacing);\n    background: var(--primary-color);\n    color: white;\n}\n\n@media (prefers-color-scheme: dark) {\n    :root {\n        --primary-color: #27ae60;\n    }\n}",
+        "duration": "20 mins"
+      }
+    ],
+    "javascript": [
+      {
+        "title": "DOM Manipulation",
+        "description": "Select and modify elements",
+        "code": "// Select elements\nconst btn = document.querySelector('#myButton');\nconst output = document.querySelector('.output');\n\n// Event handling\nbtn.addEventListener('click', () => {\n    output.textContent = 'Button clicked!';\n    output.classList.add('active');\n});",
+        "duration": "25 mins"
+      },
+      {
+        "title": "Fetch API",
+        "description": "Get data from external API",
+        "code": "async function getData() {\n    try {\n        const response = await fetch('https://api.example.com/data');\n        if (!response.ok) throw new Error('Network error');\n        const data = await response.json();\n        console.log(data);\n        return data;\n    } catch (error) {\n        console.error('Fetch error:', error);\n        return null;\n    }\n}\n\ngetData();",
+        "duration": "30 mins"
+      },
+      {
+        "title": "Array Methods",
+        "description": "Common array operations",
+        "code": "const numbers = [1, 2, 3, 4, 5];\n\n// Map: Create new array\nconst doubled = numbers.map(n => n * 2);\n\n// Filter: Select elements\nconst evens = numbers.filter(n => n % 2 === 0);\n\n// Reduce: Accumulate values\nconst sum = numbers.reduce((acc, curr) => acc + curr, 0);\n\nconsole.log({ doubled, evens, sum });",
+        "duration": "25 mins"
+      },
+      {
+        "title": "LocalStorage",
+        "description": "Store data in browser",
+        "code": "// Save data\nconst userSettings = {\n    theme: 'dark',\n    notifications: true\n};\nlocalStorage.setItem('settings', JSON.stringify(userSettings));\n\n// Retrieve data\nconst savedSettings = JSON.parse(localStorage.getItem('settings'));\nconsole.log(savedSettings);\n\n// Remove data\nlocalStorage.removeItem('settings');",
+        "duration": "20 mins"
+      },
+      {
+        "title": "Form Validation",
+        "description": "Client-side form validation",
+        "code": "document.querySelector('#signupForm').addEventListener('submit', (e) => {\n    e.preventDefault();\n    \n    const email = document.querySelector('#email').value;\n    const password = document.querySelector('#password').value;\n    \n    if (!validateEmail(email)) {\n        showError('Invalid email format');\n        return;\n    }\n    \n    if (password.length < 8) {\n        showError('Password must be 8+ characters');\n        return;\n    }\n    \n    // Submit form\n});\n\nfunction validateEmail(email) {\n    return /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email);\n}",
+        "duration": "30 mins"
+      }
+    ]
+  }
