@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
           .map(
             (site) => `
             <div class="website-item">
-              <img src="${site.img}" alt="${site.name} logo" loading="lazy" width="80" height="80" class="website-img">
+              <img src="${site.img}" alt="${site.name} logo" loading="lazy" width="100" height="100" class="website-img">
               <div class="website-info">
                 <h3>
                   <a href="${site.url}" target="_blank" rel="noopener noreferrer">
