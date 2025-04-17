@@ -44,5 +44,27 @@
     .community-section {
       padding: 1rem;
     }
+    .submission-results {
+      width: 90%;
+      margin: 1rem auto;
+      padding: 1rem;
+    }
+    
+    .submission-results h1 {
+      font-size: 1.5rem;
+    }
+    
+    .submission-results p {
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+    
+    .back-button {
+      display: block;
+      text-align: center;
+      width: 90%;
+      margin: 1.5rem auto;
+      font-size: 0.9rem;
+    }
   }
   

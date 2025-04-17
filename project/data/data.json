@@ -3,35 +3,35 @@
       "name": "freeCodeCamp",
       "speciality": "Comprehensive curriculum for web development.",
       "monthlyLearners": "1,200,000",
-      "img": "images/freecodecamp.png",
+      "img": "freecodecamp.webp",
       "url": "https://www.freecodecamp.org"
     },
     {
       "name": "Codecademy",
       "speciality": "Interactive coding lessons and career paths.",
       "monthlyLearners": "800,000",
-      "img": "images/codecademy.png",
+      "img": "codecademy.webp",
       "url": "https://www.codecademy.com"
     },
     {
       "name": "Khan Academy",
       "speciality": "Accessible computer science fundamentals alongside academics.",
       "monthlyLearners": "500,000",
-      "img": "images/khanacademy.png",
+      "img": "khanacademy.webp",
       "url": "https://www.khanacademy.org"
     },
     {
       "name": "Coursera",
       "speciality": "University-level courses and specializations in programming.",
       "monthlyLearners": "950,000",
-      "img": "images/coursera.png",
+      "img": "coursera.webp",
       "url": "https://www.coursera.org"
     },
     {
       "name": "edX",
       "speciality": "High-quality courses from top universities in various coding disciplines.",
       "monthlyLearners": "600,000",
-      "img": "images/edx.png",
+      "img": "edx.webp",
       "url": "https://www.edx.org"
     }
   ]
