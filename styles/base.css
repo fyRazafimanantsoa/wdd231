@@ -1,0 +1,45 @@
+#header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    padding: 5px 0 5px 10px;
+    border-bottom: solid 1px #ddd;
+    column-gap: 8px;
+    align-items: end;
+}
+
+header img{
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 25%;
+    margin: 2px;
+    padding-bottom: 5px;
+}    
+
+header span{
+    font-size: 1.2rem;
+    
+}
+.hamburger{
+    background: none;
+    border: none;
+    color: #3d405b;
+    cursor: pointer;
+}
+.hamburger::before {
+    content: "\2630";
+    font-size: 2rem;
+
+}
+.hamburger.show::before {
+    content: "\00D7";
+}
+.navigation. {
+    display:none;
+    
+}
+
+#menu{
+    width: 100%;
+    height: auto;
+}
