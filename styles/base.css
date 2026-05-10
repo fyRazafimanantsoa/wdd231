@@ -1,45 +1,117 @@
 #header {
-    display: grid;
-    grid-template-columns: 24px auto 44px;
-    padding: 5px 0 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0  5px 10px;
     border-bottom: solid 1px #ddd;
-    column-gap: 8px;
-    align-items: end;
 }
 
-header img{
+header img {
     display: block;
-    width: 100%;
-    height: auto;
+    width: 24px;
+    height: 24px;
     border-radius: 25%;
     margin: 2px;
-    padding-bottom: 5px;
-}    
-
-header span{
-    font-size: 1.2rem;
-    
 }
-.hamburger{
+
+header span {
+    font-size: 1.2rem;
+    flex: 1;
+    margin-left: 8px;
+}
+
+.hamburger {
     background: none;
-    border: none;
+    border: solid 1px #ddd;
     color: #3d405b;
     cursor: pointer;
+    width: 44px;
+    height: 44px;
+    font-size: 2rem;
 }
+
 .hamburger::before {
     content: "\2630";
-    font-size: 2rem;
-
 }
+
 .hamburger.show::before {
     content: "\00D7";
 }
-.navigation. {
-    display:none;
-    
+
+.navigation {
+    display: none;
+    background: white;
+    border-bottom: solid 1px #ddd;
 }
 
-#menu{
+.navigation.show {
+    display: block;
+
+}
+
+.navigation li.current{
+    background-color: #ddd;
+}
+
+#menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu a {
+    display: block;
+    text-decoration: none;
+    color: #3d405b;
+    padding: 15px 10px;
+    border-bottom: solid 1px #eee;
+    justify-content: center;
+} 
+
+#menu a:hover {
+    background-color: #df8686;
+}
+
+
+.about, .profile {
+    display: block;
+    background-color: #ddd;
+    border: 1px solid #8e8c8c;
+}
+.about h2, .profile h2{
+    text-align: center;
+    justify-self:start ;
+    background-color: black;
+    color: #ffffff;
     width: 100%;
-    height: auto;
+    position:relative;
+    padding-top: 0;
+}
+
+footer {
+    background-color: #a4a5b0;
+    padding: 1rem 10px;
+    text-align: center;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+}
+.social a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    width: 44px;
+
+}
+.social a:hoover{
+    background-color: #f7d7d7;
+}
+
+.social img{
+    width: 32px;
+    height: 32px;
 }

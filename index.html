@@ -7,44 +7,53 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/large.css">
-    <script src="script/script.js" defer></script>
-
+    
 </head>
 <body>
     <header id="header">
-        <img src="image/Iogo.svg" alt="logo of the portfolio">
+        <img src="image/logo.svg" alt="logo of the portfolio">
         <span>My portfolio</span>
         <button id="nav-button" class="hamburger" aria-label="navigation"></button>
-        <nav class="navigation">
+    </header>
+    <nav class="navigation" id="nav-bar">
             <ul id="menu">   
-                <li><a href="index.html">Home</a></li>
+                <li class="current"><a href="index.html">Home</a></li>
                 <li><a href="chamberproject.html">Chamber project</a></li>
                 <li><a href="finalproject.html">Final project</a></li>
             </ul>
-        </nav>
-    </header>
+    </nav>
     <main>
         <h1>Home</h1>
-        <section>
-            <div>
-                <h3>About Me</h3>
-            </div>
-            <div>
-                <h3>Student Profil</h3>
-            </div>
-        </section>
-        <section>
+        <div class="main-content">
+            <section class="about">
+                <h2>About Me</h2>
+                <p>I am Fy Razafimanantsoa, I am a BYU pathway student, from Madagascar and I am currently married. 
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum error voluptas fuga hic quod 
+                    aspernatur voluptatum quas commodi expedita facere esse velit quo, illum placeat doloremque distinctio a incidunt quae?</p>
+                </section>
+            <section class="profile">
+                <h2>Student Profil</h2>
+                <img src="image/fy.jpg" alt="Profile image">
+            </section>
+        </div>
+        <section class="course-id">
             <h3>Web certification course</h3>
+            <hr>
+            <div></div>
         </section>
         
     </main>
     <footer>
-        <div>
-            logos
+        <div class="social">
+            <a href="https://www.android.com/" target="_blank"><img src="image/android2.svg" alt="android2 logo" ></a>
+            <a href="https://github.com/" target="_blank"><img src="image/github.svg" alt="github logo"></a>
+            <a href="https://www.linkedin.com/posts/andrewyng_deepseek-r1-uncensored-qwq-
+            32b-puts-reasoning-activity-7305984835708141570-XVKU" target="_blank"><img src="image/linkedin.svg" alt="linkedin logo" ></a>            
         </div>
-        <div>
-
-        </div>
+        <p> ©<span id="current-year" aria-label="current yeat"></span></p>
+        <span id="last-modified"></span> 
     </footer>
+    <script src="script/script.js" defer></script>
+
 </body>
 </html>
