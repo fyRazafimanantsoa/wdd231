@@ -105,7 +105,7 @@ function displayCourse(courses) {
     /*create a new div element for each course*/
     const courseDiv = document.createElement('div');
 
-    courseDiv.classList = "courseCard"
+    courseDiv.classList = "course-card"
     
     /*Check if the course is completed*/
     if (course.completed === true) {
@@ -116,7 +116,7 @@ function displayCourse(courses) {
 
     // add content to the course div
     courseDiv.innerHTML = `
-      <li>${course.subject} ${course.number}</li>
+      <div>${course.subject} ${course.number}</div>
     `;
 
     // add to the page 
