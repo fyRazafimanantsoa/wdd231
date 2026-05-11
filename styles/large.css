@@ -30,8 +30,17 @@
         display: grid;
         grid-template-columns: 2fr 1fr;
         column-gap: 10px;
-        padding: 1rem;
-}
-
+    }
+    .profile  img{
+        display: block;
+        height: auto;
+        justify-self: center;
+        align-self: center;
+        margin: 10px;
+        height: 200px;
+        min-height: 100px;
+        width: 200px;
+        min-width:100x;
+    }
 
 }
