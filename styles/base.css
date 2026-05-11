@@ -20,6 +20,10 @@ header span {
     margin-left: 8px;
 }
 
+h1 {
+    font-size: 1.5rem;
+    margin: 10px;
+}
 .hamburger {
     background: none;
     border: solid 1px #ddd;
@@ -73,19 +77,53 @@ header span {
 }
 
 
-.about, .profile {
+.about, .profile, .course-id {
     display: block;
     background-color: #ddd;
-    border: 1px solid #8e8c8c;
+    border: 1px solid #676767;
+    margin: 10px;
 }
-.about h2, .profile h2{
+
+.about p{
+    padding: 10px;
+}
+
+.profile  {
+    display: flex;
+    flex-direction: column;
+} 
+.profile  img{
+    display: block;
+    min-width:10px;
+    height: auto;
+    justify-self: center;
+    align-self: center;
+    margin: 10px;
+}
+
+.about h2, .profile h2, .course-id h2 {
     text-align: center;
     justify-self:start ;
     background-color: black;
     color: #ffffff;
     width: 100%;
     position:relative;
-    padding-top: 0;
+    margin-top: 0;
+}
+
+.course-btn{
+    display: flex;
+    justify-content: center;
+    column-gap: 25px;
+    margin-top: 0;
+}
+
+.course-btn button{
+    background: none;
+    border: solid 1px #ddd;
+    color: #3d405b;
+    cursor: pointer;
+    font-size: 1.5rem;
 }
 
 footer {

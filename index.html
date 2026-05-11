@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/large.css">
-    
+    <script src="script/script.js" defer></script>   
 </head>
 <body>
     <header id="header">
@@ -37,9 +37,13 @@
             </section>
         </div>
         <section class="course-id">
-            <h3>Web certification course</h3>
-            <hr>
-            <div></div>
+            <h2>Web certification course</h2>
+            <div class="course-btn">
+                <button id="allCourse">All</button>
+                <button id="wddCourse">WDD</button>
+                <button id="cseCourse">CSE</button>
+            </div>
+            <div id="courseList"></div>
         </section>
         
     </main>
@@ -53,7 +57,7 @@
         <p> ©<span id="current-year" aria-label="current yeat"></span></p>
         <span id="last-modified"></span> 
     </footer>
-    <script src="script/script.js" defer></script>
+
 
 </body>
 </html>
