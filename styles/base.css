@@ -146,13 +146,17 @@ h1 {
     padding: 10px;
 }
 
-.courseList div {
+.courseList .courseCard {
     display: block;
     background-color: #ddd;
     border: 1px solid #676767;
     margin: 5px;
     padding: 10px;
     width: 20px;
+}
+
+.courseList .courseCard li {
+    list-style-type: none;
 }
 
 footer {

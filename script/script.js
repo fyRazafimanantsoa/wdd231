@@ -105,6 +105,8 @@ function displayCourse(courses) {
     /*create a new div element for each course*/
     const courseDiv = document.createElement('div');
 
+    courseDiv.classList = "courseCard"
+    
     /*Check if the course is completed*/
     if (course.completed === true) {
       courseDiv.style.backgroundColor = "#00af14";
