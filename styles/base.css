@@ -102,7 +102,7 @@ h1 {
     height: 200px;
     min-height: 100px;
     width: 200px;
-    min-width:100x;
+    min-width:100px;
 }
 
 .about h2, .profile h2, .course-id h2 {
@@ -144,6 +144,8 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
+  justify-content: center;
+  align-items: center;
 }
 
 .course-card {
@@ -169,7 +171,7 @@ footer {
     padding: 1rem 10px;
     text-align: center;
     margin-bottom: 0px;
-    display: relavive;
+    display: relative;
 }
 .social {
     display: flex;
@@ -180,12 +182,14 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 44px;
-    width: 44px;
-
+    height: 60px;
+    width: 60px;
 }
-.social a:hoover{
+
+.social a:hover{
     background-color: #f7d7d7;
+    border-radius: 30px;
+
 }
 
 .social img{

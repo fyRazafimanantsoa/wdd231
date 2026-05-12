@@ -123,7 +123,7 @@ function displayCourse(courses) {
     courseList.appendChild(courseDiv);
   }
 
-  totalCredits(courses);
+
 }
 
 wddCourse.addEventListener('click', () => {
@@ -152,7 +152,7 @@ allcourse.addEventListener('click', () => {
   displayCourse(courses);
 });
 
-function totalCredits(courseArray) {
+/*function totalCredits(courseArray) {
 
   let total = 0;
 
@@ -160,15 +160,27 @@ function totalCredits(courseArray) {
       total = total + courseArray[i].credits;
   }
 
-  let totalDisplay = document.getElementById("totalCredits");
+  let totalDisplay = document.getElementById("totalCredit");
 
-  if (!totalDisplay) {
+  /*if (!totalDisplay) {
       totalDisplay = document.createElement("p");
       totalDisplay.id = "totalCredits";
       courseList.appendChild(totalDisplay);
   }
 
   totalDisplay.textContent = "Total Credits: " + total;
+}*/
+
+function totalCredits(courses) {
+  let total = 0;
+
+  for (let i = 0; i < courses.length; i++) {
+    total = total + courses[i].credits;
+  }
+
+  let totalDisplay = document.getElementById("totalCredit");
+  totalDisplay.textContent = total;
 }
 
 displayCourse(courses);
+totalCredits(courses);
