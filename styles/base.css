@@ -123,6 +123,8 @@ h1 {
     width: 100%;
     position: relative;
     margin-top: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .course-id {
@@ -130,7 +132,7 @@ h1 {
     background-color: #ddd;
     border: 1px solid #676767;
     margin: 10px;
-    padding: 10px;
+
     min-height: 300px;
 }
 
