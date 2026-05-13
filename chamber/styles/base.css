@@ -1,0 +1,12 @@
+root{
+    --primary: #222831;
+    --secondary: #393E46;
+    --background:#222831;
+    --text: #00ADB5;
+    --accent: #EEEEEE;
+    --font: "Ubuntu", sans-serif;
+    --space-lg: 2rem;
+    --space-md: 1.5rem;
+    --space-sm: 1rem;
+    --space-xs: 0.5rem;
+}

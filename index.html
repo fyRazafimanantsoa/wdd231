@@ -27,49 +27,46 @@
 
 <body>
     <header class="header">
-        <img src="images/logo.svg" alt="logo of the portfolio">
-        <h1>Courses WDD 231</h1>
-        <button id="nav-button" class="hamburger" aria-label="navigation"></button>
+        <img src="images/logo.png" alt="logo of the portfolio">
+        <span>Coding Journey</span>
+        <button id="nav-button" class="hamburger" aria-label="Toggle navigation"></button>
     </header>
-    <nav class="navigation" id="nav-bar">
+    <nav class="navigation" id="nav-bar" aria-label="navigation menu">
         <ul id="menu">
             <li class="current"><a href="index.html">Home</a></li>
             <li><a href="chamberproject.html">Chamber project</a></li>
             <li><a href="finalproject.html">Final project</a></li>
         </ul>
     </nav>
-    <main>
+    <main aria-label="main content">
         <h1>Home</h1>
-        <div class="main-content">
+        <div class="main-content" aria-label="About Me section">
             <section class="about" aria-label="Student introduction">
                 <h2>About Me</h2>
-                <p>I am Fy Razafimanantsoa, I am a BYU pathway student, from Madagascar and I am currently married.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum error voluptas fuga hic quod
-                    aspernatur voluptatum quas commodi expedita facere esse velit quo, illum placeat doloremque
-                    distinctio a incidunt quae?</p>
+                <p>I am Fy Razafimanantsoa, a BYU-Pathway student from Madagascar with a strong passion for technology and continuous learning. I am currently developing my skills in web development and programming, focusing on building practical and user-friendly digital solutions.
+                    I enjoy exploring how technology can solve real-world problems and improve everyday experiences. I am particularly interested in areas such as front-end development, where I can combine creativity with technical skills to design responsive and engaging user interfaces.
+                    I am committed to growing as a developer, learning new tools and best practices, and contributing to meaningful projects that make a positive impact.
+                </p>
             </section>
             <section class="profile" aria-label="Student profile">
                 <h2>Student Profil</h2>
                 <img src="images/fy_profile.jpg" alt="Profile image">
             </section>
         </div>
-        <section class="course-id" aria-label="Course list">
+        <section class="course-id" aria-label="Course list" aria-label="Course display">
             <h2>Web certification course</h2>
             <div class="course-btn">
                 <button id="allCourse">All</button>
                 <button id="wddCourse">WDD</button>
                 <button id="cseCourse">CSE</button>
             </div>
-            <div class="courselist" id="courseList">
-                //The list of courses.
-
-
-            </div>
             <p>Total Credit: <span id="totalCredit"></span></p>
+            <div class="courselist" id="courseList">
+            </div>
         </section>
 
     </main>
-    <footer>
+    <footer aria-label="footer page">
         <div class="social">
             <a href="https://www.android.com/" target="_blank"><img src="images/android2.svg" alt="android2 logo"></a>
             <a href="https://github.com/" target="_blank"><img src="images/github.svg" alt="github logo"></a>

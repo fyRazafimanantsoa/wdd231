@@ -11,8 +11,8 @@
 
 header img {
     display: block;
-    width: 24px;
-    height: 24px;
+    width: 44px;
+    height: 44px;
     border-radius: 25%;
     margin: 2px;
 }
@@ -133,16 +133,18 @@ main h1 {
     background-color: #ddd;
     border: 1px solid #676767;
     margin: 10px;
-
-    min-height: 300px;
+    min-height: 350px;
 }
 
 .course-id p {
+    background-color: #eee;
+    border-radius: 0.5rem;
     margin: 1rem;
     padding: 1rem;
-    justify-self: start;
-    align-self: start;
-
+    justify-self: center;
+    align-self: center;
+    min-width: 200px;
+    text-align: center;
 }
 
 .course-btn {
