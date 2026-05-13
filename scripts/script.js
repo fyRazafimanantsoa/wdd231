@@ -116,7 +116,7 @@ function displayCourse(courses) {
 
     // add content to the course div
     courseDiv.innerHTML = `
-      <div>${course.subject} ${course.number}</div>
+      <div> ${course.subject} ${course.number} </div>
     `;
 
     // add to the page 
