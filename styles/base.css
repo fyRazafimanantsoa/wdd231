@@ -1,9 +1,10 @@
-#header {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 0  5px 10px;
+    padding: 5px 0 5px 10px;
     border-bottom: solid 1px #ddd;
+
 
 }
 
@@ -25,6 +26,7 @@ h1 {
     font-size: 1.5rem;
     margin: 10px;
 }
+
 .hamburger {
     background: none;
     border: solid 1px #ddd;
@@ -47,6 +49,9 @@ h1 {
     display: none;
     background: white;
     border-bottom: solid 1px #ddd;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
 }
 
 .navigation.show {
@@ -54,7 +59,7 @@ h1 {
 
 }
 
-.navigation li.current{
+.navigation li.current {
     background-color: #ddd;
 }
 
@@ -71,29 +76,32 @@ h1 {
     padding: 15px 10px;
     border-bottom: solid 1px #eee;
     justify-content: center;
-} 
+}
 
 #menu a:hover {
-    background-color: #df8686;
+    background-color: #f7d7d7;
 }
 
 
-.about, .profile, .course-id {
+.about,
+.profile,
+.course-id {
     display: block;
     background-color: #ddd;
     border: 1px solid #676767;
     margin: 10px;
 }
 
-.about p{
+.about p {
     padding: 10px;
 }
 
-.profile  {
+.profile {
     display: flex;
     flex-direction: column;
-} 
-.profile  img{
+}
+
+.profile img {
     display: block;
     height: auto;
     justify-self: center;
@@ -102,34 +110,52 @@ h1 {
     height: 200px;
     min-height: 100px;
     width: 200px;
-    min-width:100px;
+    min-width: 100px;
 }
 
-.about h2, .profile h2, .course-id h2 {
+.about h2,
+.profile h2,
+.course-id h2 {
     text-align: center;
-    justify-self:start ;
+    justify-self: start;
     background-color: black;
     color: #ffffff;
     width: 100%;
-    position:relative;
+    position: relative;
     margin-top: 0;
 }
 
-.course-id{
+.course-id {
     display: block;
     background-color: #ddd;
     border: 1px solid #676767;
     margin: 10px;
+    padding: 10px;
+    min-height: 300px;
 }
 
-.course-btn{
+.course-id p {
+    margin: 1rem;
+    padding: 1rem;
+    justify-self: start;
+    align-self: start;
+
+}
+
+.course-btn {
     display: flex;
     justify-content: center;
     column-gap: 25px;
-    margin-top: 0;
+    margin-bottom: 25px;
+    margin-top: 25px;
 }
 
-.course-btn button{
+.course-btn button:hover {
+    background-color: #f7d7d7;
+    border-radius: 30px;
+}
+
+.course-btn button {
     background: #df8686;
     border: solid 1px #000000;
     color: #23253d;
@@ -141,25 +167,25 @@ h1 {
 }
 
 .courselist {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
 }
 
 .course-card {
-  width: 200px;
-  padding: 12px;
-  border-radius: 10px;
-  background-color: #ddd;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  padding: 15px;
+    width: 200px;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: #ddd;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    padding: 15px;
 }
 
 .course-card.completed {
-  background-color: #00af14;
-  color: white;
+    background-color: #00af14;
+    color: white;
 }
 
 .courseList .courseCard li {
@@ -173,12 +199,14 @@ footer {
     margin-bottom: 0px;
     display: relative;
 }
+
 .social {
     display: flex;
     justify-content: center;
     column-gap: 8px;
 }
-.social a{
+
+.social a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -186,13 +214,12 @@ footer {
     width: 60px;
 }
 
-.social a:hover{
+.social a:hover {
     background-color: #f7d7d7;
     border-radius: 30px;
-
 }
 
-.social img{
+.social img {
     width: 32px;
     height: 32px;
 }
