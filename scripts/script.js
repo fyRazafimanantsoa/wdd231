@@ -135,6 +135,7 @@ wddCourse.addEventListener('click', () => {
     }
   }
   displayCourse(wddList);
+  totalCredits(wddList);
 });
 
 cseCourse.addEventListener('click', () => {
@@ -146,10 +147,12 @@ cseCourse.addEventListener('click', () => {
     }
   }
   displayCourse(cseList);
+  totalCredits(cseList);
 });
 
 allcourse.addEventListener('click', () => {
   displayCourse(courses);
+  totalCredits(courses);
 });
 
 
