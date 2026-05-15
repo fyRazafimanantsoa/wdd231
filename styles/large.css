@@ -19,6 +19,11 @@
         display: flex;
 
     }
+
+    #menu{
+        justify-content: center;
+        align-items: center;
+    }
     
     .navigation a {
        border: none;
