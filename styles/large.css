@@ -1,10 +1,21 @@
 @media only screen and (min-width: 608px) {
-    header, main, nav, footer{
+    header, 
+    main, 
+    nav, 
+    footer{
         max-width: 900px;
         margin: 0 auto;
     }
     .hamburger{
         display: none;
     }
+    .mainContent{
+    display: grid;
+    grid-template:
+    "h1 h1" var(--space-l)
+    "section1 section1" 
+    "section2 section3" 
+  ;
+}
 
 }

@@ -1,9 +1,9 @@
-const pageName = document.getElementById('pageName');
+const pageName = document.querySelector('.pageName');
 const syncPageName = document.getElementById('syncPage');
 syncPageName.textContent = pageName.textContent;
 
 const navigation = document.querySelector('.nav');
-const mainContent = document.querySelector('main');
+const mainContent = document.querySelector('.mainContent');
 let btnMenu = document.getElementById('ham-btn');
 
 btnMenu.addEventListener('click', () => {

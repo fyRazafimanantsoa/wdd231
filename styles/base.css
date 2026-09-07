@@ -13,8 +13,11 @@
 *{
   font-family: "Inter", sans-serif;
   font-weight: 300;
-  padding: var(--space-2xs);
-  margin: var(--space-2xs);
+}
+
+body{
+  margin: var(--space-xs);
+  padding: var(--space-xs);
 }
 
 header{
@@ -88,5 +91,11 @@ header span{
   color: #ffffff;
   width: 100%;
   height: auto;
+}
 
+.about, .profile, .courses{
+  border: solid 1px #000000;
+  margin-top: var(--space-s);
+  margin-bottom: var(--space-s);
+  padding: var(--space-s)
 }
