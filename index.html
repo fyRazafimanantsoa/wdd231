@@ -14,9 +14,42 @@
         <span>Site title</span>
         <button id="ham-btn" class="hamburger"></button>
     </header>
-    <nav></nav>
-    <main></main>
-    <footer></footer>
+    <nav class="nav">
+        <ul>
+            <li><a href="#" id="pageName">Home</a></li>
+            <li><a href="#" id="pageName">Chamber Project</a></li>
+            <li><a href="#" id="pageName">Final Project</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1 id="syncPage"></h1>
+        <section class="details">
+            <h2>About Me</h2>
+            <p> I am Fy Razafimanantsoa, I love software development and creating websites. My goal with joining this courses is to improve and make my software development skill better, connect with people and find a better employment opportunity through achieving this course</p>
+        </section>
+        <section class="">
+            <h2>Student Photo</h2>
+            <div><img src="images/fy_profile.jpg" alt="Fy Razafimanantsoa profile picture"></div>
+        </section>
+        <section>
+            <h2>Web Certificate Courses</h2>
+            <div>
+                <button id="allCourses">All</button>
+                <button id="cseCourses">CSE</button>
+                <button id="wddCourses">WDD</button>
+            </div>
+            <div id="courseList"></div>
+        </section>
+    </main>
+    <footer>
+        <div id="mediaLogo">
+            <a href="www.android.com"><img src="images/android2.svg" alt="Android Logo"></a> 
+            <a href="https://github.com/fyRazafimanantsoa/wdd231"><img src="images/github.svg" alt="Github Logo"></a>
+            <a href="www.linkedin.com/in/fyrazafimanantsoa"><img src="images/linkedin.svg" alt="LinkedIn Logo"></a>
+        </div>
+        <span> ©<span id="currentYear"></span> | Fy Razafimanantsoa | Madagascar </span>
+        <span id="lastModified"></span>
+    </footer>
     <script src="scripts/script.js"></script>
 </body>
 </html>

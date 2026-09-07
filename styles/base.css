@@ -1,4 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+:root {
+  --space-2xs: 2px;
+  --space-xs:  5px;
+  --space-s:   10px;
+  --space-l:  30px;
+  --space-xl: 40px;
+  --space-2xl: 60px;
+  --space-3xl: 80px;
+}
+
+*{
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  padding: var(--space-2xs);
+  margin: var(--space-2xs);
+}
 
 header{
   display: grid;
@@ -6,19 +23,19 @@ header{
   padding: 5px 0 5px 10px;
   align-items: end;
   border-bottom: solid 1px #dddd;
-  column-gap: 8px;
+  column-gap: var(--space-l);
 }
 
 header img{
   display: block;
   width: 100%;
   height: auto;
-  padding-bottom:5px ;
+  padding-bottom:var(--space-xs) ;
 }
 
 header span{
   font-size: 1.2rem;
-  padding-bottom: 5px ;
+  padding-bottom: var(--space-xs) ;
 }
 
 .hamburger{
@@ -33,6 +50,43 @@ header span{
 }
 .hamburger.show::before {
   content: "\00D7";
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 2rem;
+}
+.nav{
+  display: none;
+}
+.drop{
+  display: flex;
+  background-color: #5e5e5e;
+}
+.pushdown{
+  margin-top: var(--space-3xl);
+}
+.nav ul{
+  display: flexbox;
+
+}
+.nav ul li{
+  list-style-type: none;
+  background-color: #5e5e5e ;
+  height: var(--space-l);
+  cursor: pointer;
+  padding: var(--space-xs);
+  border: solid 1px #ffffff;
+}
+
+.active{
+  background-color: #acacac ;
+  list-style-type: none;
+  height: var(--space-l);
+  cursor: pointer;
+  padding: var(--space-xs);
+}
+.nav ul a{
+  text-decoration: none;
+  color: #ffffff;
+  width: 100%;
+  height: auto;
+
 }
