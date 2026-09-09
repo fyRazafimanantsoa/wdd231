@@ -13,7 +13,7 @@
     .navigation{
         display: block;
         border-bottom: solid 1px #ddd;
-        
+
     }
     .navigation ul {
         display: flex;
@@ -29,7 +29,7 @@
        border: none;
     }
     #menu a:hover {
-        background-color: #dcd9d9;
+        background-color: #fdfdfd;
         color: #000000;
     }
     .main-content{
