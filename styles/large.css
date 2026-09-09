@@ -29,7 +29,8 @@
        border: none;
     }
     #menu a:hover {
-        background-color: #df8686;
+        background-color: #dcd9d9;
+        color: #000000;
     }
     .main-content{
         display: grid;
