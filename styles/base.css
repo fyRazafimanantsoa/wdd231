@@ -1,19 +1,12 @@
-
 * {
-    box-sizing: border-box;
     font-family: 'Lato', sans-serif;
-}
-
-body {
-    margin: 0;
-    padding: 0;
 }
 
 .header {
     display: flex;
     align-items: center;
     padding: 5px 10px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: solid 1px #ddd;
 }
 
 header img {
@@ -37,7 +30,7 @@ main h1 {
 
 .hamburger {
     background: none;
-    border: 1px solid #ddd;
+    border: solid 1px #ddd;
     color: #3d405b;
     cursor: pointer;
     width: 44px;
@@ -55,12 +48,15 @@ main h1 {
 
 .navigation {
     display: none;
-    background: #000;
-    border-bottom: 1px solid #ddd;
+    background: rgb(0, 0, 0);
+    border-bottom: solid 1px #ddd;
+    justify-items: center;
+    align-items: center;
 }
 
 .navigation.show {
     display: block;
+
 }
 
 .navigation li.current {
@@ -77,18 +73,20 @@ main h1 {
 #menu a {
     display: block;
     text-decoration: none;
-    color: #fff;
+    color: #ffffff;
     padding: 15px 10px;
-    border-bottom: 1px solid #eee;
+    border-bottom: solid 1px #eee;
 }
 
 #menu a:hover {
     background-color: #dcd9d9;
-    color: #000;
+    color: #000000;
 }
 
+
 .about,
-.profile {
+.profile,
+.course-id {
     display: block;
     background-color: #ddd;
     border: 1px solid #676767;
@@ -97,7 +95,6 @@ main h1 {
 
 .about p {
     padding: 10px;
-    line-height: 1.5;
 }
 
 .profile {
@@ -107,108 +104,108 @@ main h1 {
 
 .profile img {
     display: block;
-    height: 200px;
-    width: 200px;
-    object-fit: cover;
+    height: auto;
+    justify-self: center;
     align-self: center;
     margin: 10px;
+    height: 200px;
+    min-height: 100px;
+    width: 200px;
+    min-width: 100px;
 }
 
 .about h2,
 .profile h2,
 .course-id h2 {
     text-align: center;
-    background-color: #000;
-    color: #fff;
+    justify-self: start;
+    background-color: black;
+    color: #ffffff;
     width: 100%;
+    position: relative;
     margin-top: 0;
-    padding: 10px 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
-
 .course-id {
+    display: block;
     background-color: #ddd;
     border: 1px solid #676767;
     margin: 10px;
     min-height: 350px;
 }
 
-.course-id h2 {
+.course-id p {
+    background-color: #eee;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    padding: 1rem;
+    justify-self: center;
+    align-self: center;
+    min-width: 200px;
     text-align: center;
-    background-color: black;
-    color: white;
-    padding: 8px;
-    margin-top: 0;
 }
 
 .course-btn {
     display: flex;
     justify-content: center;
-    gap: 25px;
-    margin: 25px;
-}
-
-.course-btn button {
-    background: black;
-    color: white;
-    border: 1px solid white;
-    cursor: pointer;
-    font-size: 1.2rem;
-    padding: 7px 20px;
-    border-radius: 20px;
+    column-gap: 25px;
+    margin-bottom: 25px;
+    margin-top: 25px;
 }
 
 .course-btn button:hover {
-    background-color: white;
-    color: black;
+    background-color: #dcd9d9;
+    color: #000000;
 }
 
-.course-id > p {
-    background-color: white;
-    border-radius: 5px;
-    margin: 15px auto;
-    padding: 12px;
-    width: 200px;
-    text-align: center;
+.course-btn button {
+    background: #000000;
+    border: solid 1px #fafafa;
+    color: #fbfbfb;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 5px 15px;
+    border-radius: 22px;
+    margin-bottom: 10px;
 }
 
 .courselist {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    margin: 12px;
+
 }
 
 .course-card {
-    background-color: white;
-    border: 1px solid #999;
-    padding: 5px;
-    text-align: center;
-}
-
-.course-card h3 {
-    margin-top: 0;
-    color: black;
-}
-
-.course-card p {
-    margin: 8px 0;
+    min-width: 80px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ddd;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    justify-self: center;
 }
 
 .course-card.completed {
-    background-color: #c8e6c9;
+    background-color: #00570a;
+    color: white;
 }
 
-.course-card.incomplete {
-    background-color: #eee;
-}
 
+.courseList .courseCard li {
+    list-style-type: none;
+}
 
 footer {
     background-color: #a4a5b0;
     padding: 1rem 10px;
     text-align: center;
-    margin-bottom: 0;
+    margin-bottom: 0px;
 }
 
 .social {
@@ -233,23 +230,4 @@ footer {
 .social img {
     width: 32px;
     height: 32px;
-}
-
-@media screen and (max-width: 600px) {
-    .courselist {
-        grid-template-columns: 1fr;
-        margin: 15px;
-    }
-
-    .course-card {
-        padding: 18px;
-    }
-
-    .course-btn {
-        gap: 8px;
-    }
-
-    .course-btn button {
-        padding: 8px 20px;
-    }
 }
