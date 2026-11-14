@@ -1,0 +1,84 @@
+@media screen and (min-width: 768px) {
+    
+    header {
+        flex-wrap: nowrap;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    #nav-bar {
+        display: flex;
+        width: auto;
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        padding-top: 0;
+    }
+
+    nav li {
+        padding: 0;
+    }
+
+    nav a:hover {
+        color: var(--color-primary);
+        text-decoration: underline;
+    }
+
+    .view-toggles {
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    .grid-view {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .list-view {
+        grid-template-columns: 1fr;
+    }
+
+    .list-view .business-card {
+        display: flex;
+        align-items: stretch;
+    }
+
+    .list-view .card-header {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-bottom: none;
+        border-right: 1px solid var(--color-primary);
+    }
+
+    .list-view .card-body {
+        width: 70%;
+        align-items: center;
+    }
+
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .footer-left, .footer-middle, .footer-right {
+        flex: 1;
+    }
+
+    .footer-middle {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-right {
+        text-align: right;
+    }
+}

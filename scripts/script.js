@@ -98,28 +98,21 @@ function displayCourse(courses) {
 
   courseList.innerHTML = '';
 
-  /*loop through the courses array*/
   for (let i = 0; i < courses.length; i++) {
     const course = courses[i];
 
-    /*create a new div element for each course*/
     const courseDiv = document.createElement('div');
 
     courseDiv.classList = "course-card"
-
-    /*Check if the course is completed*/
     if (course.completed === true) {
       courseDiv.style.backgroundColor = "#00af14";
     } else {
       courseDiv.style.backgroundColor = "#62606048";
     }
-
-    // add content to the course div
     courseDiv.innerHTML = `
       <div> ${course.subject} ${course.number} </div>
     `;
 
-    // add to the page 
     courseList.appendChild(courseDiv);
   }
 

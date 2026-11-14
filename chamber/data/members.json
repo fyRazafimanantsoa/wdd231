@@ -1,0 +1,59 @@
+
+[
+  {
+    "name": "Tana Business Solutions",
+    "address": "Analamahitsy, Antananarivo",
+    "phone": "+261 34 12 345 67",
+    "website": "https://example.com",
+    "image": "business1.webp",
+    "membership": 3
+  },
+  {
+    "name": "MadaTech",
+    "address": "Ankorondrano, Antananarivo",
+    "phone": "+261 32 12 345 67",
+    "website": "https://example.com",
+    "image": "business2.webp",
+    "membership": 2
+  },
+  {
+    "name": "Tana Construction",
+    "address": "Ivandry, Antananarivo",
+    "phone": "+261 33 12 345 67",
+    "website": "https://example.com",
+    "image": "business3.webp",
+    "membership": 1
+  },
+  {
+    "name": "Vanilla Export Madagascar",
+    "address": "Anosy, Antananarivo",
+    "phone": "+261 34 22 333 44",
+    "website": "https://example.com",
+    "image": "business4.webp",
+    "membership": 3
+  },
+  {
+    "name": "Mada Travel Agency",
+    "address": "Behoririka, Antananarivo",
+    "phone": "+261 32 22 333 44",
+    "website": "https://example.com",
+    "image": "business5.webp",
+    "membership": 2
+  },
+  {
+    "name": "Green Energy Mada",
+    "address": "Ambohibao, Antananarivo",
+    "phone": "+261 33 22 333 44",
+    "website": "https://example.com",
+    "image": "business6.webp",
+    "membership": 1
+  },
+  {
+    "name": "Tana Digital Marketing",
+    "address": "Analakely, Antananarivo",
+    "phone": "+261 34 33 444 55",
+    "website": "https://example.com",
+    "image": "business7.webp",
+    "membership": 2
+  }
+]
