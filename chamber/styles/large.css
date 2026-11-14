@@ -47,7 +47,7 @@
         font-family: inherit;
         font-size: 1rem;
         color: var(--color-text);
-        outline: none; /* Removes the blue focus box */
+        outline: none;
     }
 
     .toggle-btn:hover {
@@ -59,14 +59,12 @@
         font-weight: bold;
     }
 
-    /* --- GRID VIEW --- */
     .directory-container.grid-view {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
     }
 
-    /* --- LIST VIEW --- */
     .directory-container.list-view {
         display: flex;
         flex-direction: column;
@@ -124,7 +122,6 @@
         margin: 0;
     }
 
-    /* Footer Layout */
     .footer-content {
         flex-direction: row;
         justify-content: space-between;
