@@ -28,47 +28,103 @@
     nav a:hover {
         color: var(--color-primary);
         text-decoration: underline;
+        background-color: transparent;
     }
 
     .view-toggles {
+        display: flex; 
         justify-content: center;
+        gap: 1rem;
         margin-bottom: 2rem;
     }
 
-    .grid-view {
-        grid-template-columns: repeat(3, 1fr);
+    .toggle-btn {
+        display: block;
+        padding: 0.5rem 2rem;
+        background-color: var(--color-background);
+        border: 1px solid var(--color-primary);
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 1rem;
+        color: var(--color-text);
+        outline: none; /* Removes the blue focus box */
     }
 
-    .list-view {
-        grid-template-columns: 1fr;
+    .toggle-btn:hover {
+        background-color: var(--color-secondary);
+    }
+
+    .toggle-btn.active {
+        background-color: var(--color-secondary);
+        font-weight: bold;
+    }
+
+    /* --- GRID VIEW --- */
+    .directory-container.grid-view {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    /* --- LIST VIEW --- */
+    .directory-container.list-view {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
     }
 
     .list-view .business-card {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: stretch;
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        grid-template-rows: auto auto;
+        background-color: var(--color-background);
+        border: 1px solid var(--color-primary);
+        border-radius: 5px;
+        overflow: hidden;
     }
 
     .list-view .card-header {
-        width: 30%;
+        grid-column: 1;
+        grid-row: 1 / 3;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        border-bottom: none;
+        align-items: center;
         border-right: 1px solid var(--color-primary);
+        border-bottom: none;
+        margin: 0;
+        padding: 1rem;
     }
 
     .list-view .card-body {
-        width: 70%;
+        grid-column: 2;
+        grid-row: 1;
+        display: flex;
         align-items: center;
+        gap: 1.5rem;
+        padding: 1rem 1rem 0.5rem 1rem;
+    }
+
+    .list-view .card-image img {
+        width: 80px;
+        height: 80px;
     }
 
     .list-view .card-description {
-        width: 70%;
-        margin-left: 30%;
+        grid-column: 2;
+        grid-row: 2;
+        margin: 0;
         padding: 0 1rem 1rem 1rem;
+        width: auto;
     }
 
+    .list-view .card-description p {
+        border-top: 1px dashed var(--color-primary);
+        padding-top: 0.5rem;
+        margin: 0;
+    }
+
+    /* Footer Layout */
     .footer-content {
         flex-direction: row;
         justify-content: space-between;
