@@ -1,59 +1,79 @@
-
 [
   {
     "name": "Tana Business Solutions",
+    "tagline": "Your Partner in Growth",
     "address": "Analamahitsy, Antananarivo",
-    "phone": "+261 34 12 345 67",
-    "website": "https://example.com",
-    "image": "business1.webp",
-    "membership": 3
+    "phone": "+261 34 89 123 45",
+    "email": "contact@tanabusiness.mg",
+    "website": "https://www.tanabusinesssolutions.com",
+    "image": "images/tana_business_solutions.jpg",
+    "membership": 3,
+    "description": "Providing top-tier consulting and financial services to local businesses in Antananarivo since 2010."
   },
   {
     "name": "MadaTech",
+    "tagline": "Innovating for Tomorrow",
     "address": "Ankorondrano, Antananarivo",
-    "phone": "+261 32 12 345 67",
-    "website": "https://example.com",
-    "image": "business2.webp",
-    "membership": 2
+    "phone": "+261 32 45 678 90",
+    "email": "hello@madatech.mg",
+    "website": "https://www.madatech.com",
+    "image": "images/madatech.jpg",
+    "membership": 2,
+    "description": "A leading software development agency specializing in custom web applications and mobile solutions."
   },
   {
     "name": "Tana Construction",
+    "tagline": "Building the Future",
     "address": "Ivandry, Antananarivo",
-    "phone": "+261 33 12 345 67",
-    "website": "https://example.com",
-    "image": "business3.webp",
-    "membership": 1
+    "phone": "+261 33 11 223 34",
+    "email": "info@tanaconstruction.mg",
+    "website": "https://www.tanaconstruction.com",
+    "image": "images/tana_construction.jpg",
+    "membership": 1,
+    "description": "Experts in residential and commercial construction, offering reliable and sustainable building practices."
   },
   {
     "name": "Vanilla Export Madagascar",
+    "tagline": "Premium Quality Vanilla",
     "address": "Anosy, Antananarivo",
-    "phone": "+261 34 22 333 44",
-    "website": "https://example.com",
-    "image": "business4.webp",
-    "membership": 3
+    "phone": "+261 34 55 667 78",
+    "email": "sales@vanillaexport.mg",
+    "website": "https://www.vanillaexportmadagascar.com",
+    "image": "images/vanilla_export_madagascar.jpg",
+    "membership": 3,
+    "description": "Connecting local vanilla farmers with international markets, delivering the highest grade of Madagascar vanilla."
   },
   {
     "name": "Mada Travel Agency",
+    "tagline": "Explore the Red Island",
     "address": "Behoririka, Antananarivo",
-    "phone": "+261 32 22 333 44",
-    "website": "https://example.com",
-    "image": "business5.webp",
-    "membership": 2
+    "phone": "+261 32 99 887 76",
+    "email": "booking@madatravel.mg",
+    "website": "https://www.madatravelagency.com",
+    "image": "images/mada_travel.jpg",
+    "membership": 2,
+    "description": "Your local guide to unforgettable tours, eco-tourism, and travel packages across Madagascar."
   },
   {
     "name": "Green Energy Mada",
+    "tagline": "Powering a Sustainable Future",
     "address": "Ambohibao, Antananarivo",
-    "phone": "+261 33 22 333 44",
-    "website": "https://example.com",
-    "image": "business6.webp",
-    "membership": 1
+    "phone": "+261 33 77 665 54",
+    "email": "contact@greenenergy.mg",
+    "website": "https://www.greenenergymada.com",
+    "image": "images/green_mada.jpg",
+    "membership": 1,
+    "description": "Dedicated to providing affordable solar panels and renewable energy solutions for homes and businesses."
   },
   {
     "name": "Tana Digital Marketing",
+    "tagline": "Grow Your Online Presence",
     "address": "Analakely, Antananarivo",
-    "phone": "+261 34 33 444 55",
-    "website": "https://example.com",
-    "image": "business7.webp",
-    "membership": 2
+    "phone": "+261 34 22 110 09",
+    "email": "team@tanadigital.mg",
+    "website": "https://www.tanadigitalmarketing.com",
+    "image": "images/tana_digital.jpg",
+    "membership": 2,
+    "description": "Helping brands succeed online through social media management, SEO, and targeted digital advertising."
   }
 ]

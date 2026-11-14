@@ -190,6 +190,17 @@ main h2 {
     text-decoration: underline;
 }
 
+.card-description {
+    padding: 0 1rem 1rem 1rem;
+    font-size: 0.85rem;
+    color: var(--color-text);
+}
+
+.card-description p {
+    border-top: 1px dashed var(--color-primary);
+    padding-top: 0.5rem;
+}
+
 footer {
     background-color: var(--color-secondary);
     padding: 2rem 1rem;

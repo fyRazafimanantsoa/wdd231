@@ -46,30 +46,23 @@ function displayMembers(members) {
     
     memberDiv.classList.add('business-card');
 
-    let memberLevel = '';
-    if (member.membership === 1) {
-      memberLevel = 'Member';
-    } else if (member.membership === 2) {
-      memberLevel = 'Silver Member';
-    } else if (member.membership === 3) {
-      memberLevel = 'Gold Member';
-    }
-
     memberDiv.innerHTML = `
       <div class="card-header">
         <h3>${member.name}</h3>
-        <p class="tagline">${memberLevel}</p>
+        <p class="tagline">${member.tagline}</p>
       </div>
       <div class="card-body">
         <div class="card-image">
-          <!-- Added loading="lazy" for performance -->
-          <img src="images/${member.image}" alt="${member.name} logo" loading="lazy">
+          <img src="${member.image}" alt="${member.name} logo" loading="lazy">
         </div>
         <div class="card-info">
-          <p><strong>ADDRESS:</strong> ${member.address}</p>
+          <p><strong>EMAIL:</strong> ${member.email}</p>
           <p><strong>PHONE:</strong> ${member.phone}</p>
           <p><strong>URL:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
         </div>
+      </div>
+      <div class="card-description">
+        <p>${member.description}</p>
       </div>
     `;
 
