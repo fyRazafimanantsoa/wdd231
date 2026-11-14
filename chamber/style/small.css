@@ -79,6 +79,14 @@ nav a {
     text-decoration: none;
     color: var(--color-text);
     font-weight: 500;
+    display: block; 
+    padding: 0.5rem;
+    border-radius: 4px; 
+}
+
+nav a:hover {
+    background-color: var(--color-background); 
+    color: var(--color-primary);
 }
 
 main {
@@ -233,8 +241,7 @@ footer {
 .social img {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
-    background-color: var(--color-background);
+    object-fit: contain;
 }
 
 .social img:hover {
